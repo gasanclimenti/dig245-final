@@ -1,20 +1,17 @@
 <!doctype html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/styles.css">
 
-    <title>dig245-final</title>
+	<title>dig245-final</title>
 </head>
 
 <body>
-
-    <h1>dig245-final</h1>
-
-
-
 
 	<!-- jquery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -23,5 +20,350 @@
 	<!-- Project JS -->
 	<script src="assets/js/main.js"></script>
 
+	<h1>dig245-final</h1>
+
+<button>Generate!</button>
+
+<!-- first color -->
+	<div class="square1"></div>
+
+	<script>
+
+			var R = Math.floor(Math.random() * 255) + 1
+			var G = Math.floor(Math.random() * 255) + 1
+			var B = Math.floor(Math.random() * 255) + 1
+
+			function rgbToHex(R,G,B) {return toHex(R)+toHex(G)+toHex(B)}
+			function toHex(n) {
+			 n = parseInt(n,10);
+			 if (isNaN(n)) return "00";
+			 n = Math.max(0,Math.min(n,255));
+			 return "0123456789ABCDEF".charAt((n-n%16)/16)
+			      + "0123456789ABCDEF".charAt(n%16);
+			};
+
+			var color1 = "#" + rgbToHex(R, G, B);
+
+			console.log(color1);
+
+			$(document).ready(function() {
+				$("button").click(function() {
+					$(".square1").css("background-color", color1);
+				});
+			});
+
+console.log(R);
+console.log(G);
+console.log(B);
+
+	var R = R + 50
+	var G = G + 50
+	var B = B + 50
+
+	function rgbToHex(R,G,B) {return toHex(R)+toHex(G)+toHex(B)}
+	function toHex(n) {
+	 n = parseInt(n,10);
+	 if (isNaN(n)) return "00";
+	 n = Math.max(0,Math.min(n,255));
+	 return "0123456789ABCDEF".charAt((n-n%16)/16)
+				+ "0123456789ABCDEF".charAt(n%16);
+	};
+
+	var colorshift = "#" + rgbToHex(R, G, B);
+
+$(document).ready(function() {
+	$(".square1").click(function() {
+		$(".square1").css("background-color", colorshift);
+	});
+});
+
+</script>
+
+<!-- second color -->
+	<div class="square2"></div>
+
+	<script>
+
+			var R = Math.floor(Math.random() * 255) + 1
+			var G = Math.floor(Math.random() * 255) + 1
+			var B = Math.floor(Math.random() * 255) + 1
+
+			function rgbToHex(R,G,B) {return toHex(R)+toHex(G)+toHex(B)}
+			function toHex(n) {
+			 n = parseInt(n,10);
+			 if (isNaN(n)) return "00";
+			 n = Math.max(0,Math.min(n,255));
+			 return "0123456789ABCDEF".charAt((n-n%16)/16)
+			      + "0123456789ABCDEF".charAt(n%16);
+			};
+
+			var color2 = "#" + rgbToHex(R, G, B);
+
+			console.log(color2);
+
+			$(document).ready(function() {
+				$("button").click(function() {
+					$(".square2").css("background-color", color2);
+				});
+			});
+
+console.log(R);
+console.log(G);
+console.log(B);
+
+var Rchange = Math.floor(Math.random() * 255) + 1
+var Gchange = Math.floor(Math.random() * 255) + 1
+var Bchange = Math.floor(Math.random() * 255) + 1
+
+function rgbToHex(Rchange,Gchange,Bchange) {return toHex(Rchange)+toHex(Gchange)+toHex(Bchange)}
+function toHex(n) {
+ n = parseInt(n,10);
+ if (isNaN(n)) return "00";
+ n = Math.max(0,Math.min(n,255));
+ return "0123456789ABCDEF".charAt((n-n%16)/16)
+			+ "0123456789ABCDEF".charAt(n%16);
+};
+
+var colorchange = "#" + rgbToHex(Rchange, Gchange, Bchange);
+
+console.log(colorchange);
+
+$(document).ready(function() {
+	$(".square2").click(function() {
+		$(".square2").css("background-color", colorchange);
+	});
+});
+
+</script>
+
+
+<!-- third color -->
+	<div class="square3"></div>
+
+	<script>
+
+			var R = Math.floor(Math.random() * 255) + 1
+			var G = Math.floor(Math.random() * 255) + 1
+			var B = Math.floor(Math.random() * 255) + 1
+
+			function rgbToHex(R,G,B) {return toHex(R)+toHex(G)+toHex(B)}
+			function toHex(n) {
+			 n = parseInt(n,10);
+			 if (isNaN(n)) return "00";
+			 n = Math.max(0,Math.min(n,255));
+			 return "0123456789ABCDEF".charAt((n-n%16)/16)
+			      + "0123456789ABCDEF".charAt(n%16);
+			};
+
+			var color3 = "#" + rgbToHex(R, G, B);
+
+			console.log(color3);
+
+			$(document).ready(function() {
+				$("button").click(function() {
+					$(".square3").css("background-color", color3);
+				});
+			});
+
+console.log(R);
+console.log(G);
+console.log(B);
+
+var R = R - 100
+var G = G - 100
+var B = B - 100
+
+function rgbToHex(R,G,B) {return toHex(R)+toHex(G)+toHex(B)}
+function toHex(n) {
+ n = parseInt(n,10);
+ if (isNaN(n)) return "00";
+ n = Math.max(0,Math.min(n,255));
+ return "0123456789ABCDEF".charAt((n-n%16)/16)
+			+ "0123456789ABCDEF".charAt(n%16);
+};
+
+var color3shift = "#" + rgbToHex(R, G, B);
+
+$(document).ready(function() {
+$(".square3").click(function() {
+	$(".square3").css("background-color", color3shift);
+});
+});
+
+</script>
+
+
+<!-- fourth color -->
+	<div class="square4"></div>
+
+	<script>
+
+			var R = Math.floor(Math.random() * 255) + 1
+			var G = Math.floor(Math.random() * 255) + 1
+			var B = Math.floor(Math.random() * 255) + 1
+
+			function rgbToHex(R,G,B) {return toHex(R)+toHex(G)+toHex(B)}
+			function toHex(n) {
+			 n = parseInt(n,10);
+			 if (isNaN(n)) return "00";
+			 n = Math.max(0,Math.min(n,255));
+			 return "0123456789ABCDEF".charAt((n-n%16)/16)
+			      + "0123456789ABCDEF".charAt(n%16);
+			};
+
+			var color4 = "#" + rgbToHex(R, G, B);
+
+			console.log(color4);
+
+			$(document).ready(function() {
+				$("button").click(function() {
+					$(".square4").css("background-color", color4);
+				});
+			});
+
+console.log(R);
+console.log(G);
+console.log(B);
+
+var R = R + 50
+var G = G - 100
+var B = B * 2
+
+function rgbToHex(R,G,B) {return toHex(R)+toHex(G)+toHex(B)}
+function toHex(n) {
+ n = parseInt(n,10);
+ if (isNaN(n)) return "00";
+ n = Math.max(0,Math.min(n,255));
+ return "0123456789ABCDEF".charAt((n-n%16)/16)
+			+ "0123456789ABCDEF".charAt(n%16);
+};
+
+var color4shift = "#" + rgbToHex(R, G, B);
+
+$(document).ready(function() {
+$(".square4").click(function() {
+	$(".square4").css("background-color", color4shift);
+});
+});
+
+</script>
+
+<!-- fifth color -->
+	<div class="square5"></div>
+
+	<script>
+
+			var R = Math.floor(Math.random() * 255) + 1
+			var G = Math.floor(Math.random() * 255) + 1
+			var B = Math.floor(Math.random() * 255) + 1
+
+			function rgbToHex(R,G,B) {return toHex(R)+toHex(G)+toHex(B)}
+			function toHex(n) {
+			 n = parseInt(n,10);
+			 if (isNaN(n)) return "00";
+			 n = Math.max(0,Math.min(n,255));
+			 return "0123456789ABCDEF".charAt((n-n%16)/16)
+			      + "0123456789ABCDEF".charAt(n%16);
+			};
+
+			var color5 = "#" + rgbToHex(R, G, B);
+
+			console.log(color5);
+
+			$(document).ready(function() {
+				$("button").click(function() {
+					$(".square5").css("background-color", color5);
+				});
+			});
+
+console.log(R);
+console.log(G);
+console.log(B);
+
+var Rr = Math.floor(Math.random() * 255) + 1
+var G = Rr
+var B = Rr
+
+function rgbToHex(Rr,G,B) {return toHex(Rr)+toHex(G)+toHex(B)}
+function toHex(n) {
+ n = parseInt(n,10);
+ if (isNaN(n)) return "00";
+ n = Math.max(0,Math.min(n,255));
+ return "0123456789ABCDEF".charAt((n-n%16)/16)
+			+ "0123456789ABCDEF".charAt(n%16);
+};
+
+var color5shift = "#" + rgbToHex(Rr, G, B);
+
+$(document).ready(function() {
+$(".square5").click(function() {
+	$(".square5").css("background-color", color5shift);
+});
+});
+
+</script>
+
+<br>
+<br>
+
+<p>What I need to do next:</p>
+<ul>
+	<li>Repeat (not just generate once) without refreshing</li>
+	<li>Each color individually? (makes customization easier?)</li>
+		<ul>
+			<li>Choose-your-own-adventure style?</li>
+		</ul>
+	<li>Customization</li>	
+</ul>
+
+<!--
+	<p>Choose a base color.</p>
+		<button id="blue">Blue</button>
+		<script>
+				$(document).ready(function() {
+					$("blue").click(function() {
+						$(".square").css("background-color", "rgb(52, 235, 210)");
+					});
+				});
+	</script>
+
+
+		<button id="green">Green</button>
+		<script>
+					$(document).ready(function() {
+						$("button").click(function() {
+							$(".square").css("background-color", "rgb(57, 200, 110)");
+						});
+					});
+
+			</script>
+-->
+
+
+	<script>
+		R = hexToR("#34ebd2");
+		G = hexToG("#34ebd2");
+		B = hexToB("#34ebd2");
+
+		function hexToR(h) {
+			return parseInt((cutHex(h)).substring(0, 2), 16)
+		}
+
+		function hexToG(h) {
+			return parseInt((cutHex(h)).substring(2, 4), 16)
+		}
+
+		function hexToB(h) {
+			return parseInt((cutHex(h)).substring(4, 6), 16)
+		}
+
+		function cutHex(h) {
+			return (h.charAt(0) == "#") ? h.substring(1, 7) : h
+		};
+
+	</script>
+
+
 </body>
+
 </html>

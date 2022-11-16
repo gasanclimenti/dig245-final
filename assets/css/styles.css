@@ -1,2 +1,10 @@
 
 /* css */
+
+div {
+  width: 100px;
+  height: 100px;
+  background: pink;
+  margin-left: 10px;
+  margin-top: 10px;
+}
