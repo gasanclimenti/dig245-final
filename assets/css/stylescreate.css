@@ -3,7 +3,7 @@
 
 p {
   font-family: "Jua";
-  font-size: 20px;
+  font-size: 120%;
   padding: 5px;
   text-align: center;
 }
@@ -20,18 +20,42 @@ h4 {
 .instructions {
   border-radius: 100px;
   border: 3px solid #4CCCE9;
-  margin: 10px 30px 30px 10px;
-  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.btn {
+.question {
+  border-radius: 100px;
+  border: 3px solid #4CCCE9;
+  width: 50%;
+  height: 100%
+}
+
+.ask {
+  margin: 1rem;
+}
+
+.btn-primary {
   font-family: "Jua";
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.btnKindaSet {
+  margin: 0rem 1rem 1rem .5rem;
+}
+
+.colortester {
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
 }
 
 .square {
   width: 100%;
   height: 20rem;
+  background-color: gray;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .square1 {
@@ -43,16 +67,29 @@ h4 {
 }
 
 .hexcode {
+  color: white;
+}
+
+.hex {
   padding-top: 17rem;
   color: white;
 }
 
-.hexcode1 {
-  padding-left: 1rem;
+.btnKindaSetYes {
+  width: 100%;
+  margin-top: 1rem;
 }
 
-.hexcode5 {
-  padding-right: 1rem;
+.btnChange {
+  margin: 0rem 1rem 1rem .5rem;
+}
+
+.pickAColor {
+  border-radius: 100px;
+  border: 3px solid #4CCCE9;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
 /* from W3Schools */
