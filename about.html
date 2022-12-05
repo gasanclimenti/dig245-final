@@ -30,20 +30,20 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-10">
-				<img src="assets/img/logo.svg" class="logo">
+				<a href="index.html"><img src="assets/img/logo.svg" class="logo"></a>
 			</div>
 			<div class="col-lg-1">
 				<div class="dropdown">
 					<h4 class="dropbtn">Modes</h4>
 					<div class="dropdown-content">
-						<a href="index.html">Random</a>
-						<a href="createmode.html">Create</a>
-						<a href="monochrome.html">Monochrome</a>
+						<a class="menu" href="random.html">Random</a>
+						<a class="menu" href="createmode.html">Create</a>
+						<a class="menu" href="monochrome.html">Monochrome</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-1">
-				<a href="about.html"><h4>About</h4></a>
+				<a class="menu" href="about.html"><h4>About</h4></a>
 			</div>
 		</div>
 	</div>
@@ -51,7 +51,12 @@
 
 
 	<div class="container">
-		<p class="instructions">Welcome! Type some explanation here!</p>
+		<p class="about about1">Color Generate seeks to help designers and artists create and visualize different palettes for any project they may have. Utilizing randomization as well as manual editing, users can form palettes whether they have some ideas or none at all. With a clean, playful aesthetic, Color Generate provides a space to see colors without overwhelming distractions or strange features.</p>
+		<p class="about about2">Each color is assigned a Hex and RGB code. Both consider the amount of red, green, and blue that make up each color, but present these ratios in a different way.
+			Hex codes begin with a # and include 6 characters. Each character is either a number from 0-9 or a letter A-F. The first two characters relate to red content, the second two green content, and last two blue. For example, bright red is #ff0000. Black is listed as #000000 and white as #ffffff.
+			RGB codes consist of three numbers, each ranging from 0-255. The first number relates to the amount of red, the second number the amount of green, and the third blue. This means, a color with a code "0, 0, 255" will be solid dark blue. By increasing or decreasing each number/character, the color will change shade.</p>
+		<p class="about about3">Random Mode generates colors, not surprisingly, randomly. Using javascript to select three random numbers from 0-255 for each generated color, Random Mode uses the luck of random chance to display different five colors set in RGB codes with a Hex code presented on-screen. Try <a href="random.html">Random Mode</a> here.</p>
+		<p class="about about4">Create Mode allows users to generate colors one by one, then manipulate the results. If a color comes to screen that may look nicer a little lighter or darker, users can alter the red, green, and blue content to achieve desired results. Users can also pick one singular color to manipulate through all 5 selections. Try <a href="create.html">Create Mode</a> here.</p>
 	</div>
 
 

@@ -30,20 +30,22 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-10">
-				<img src="assets/img/logo.svg" class="logo">
+				<a href="index.html"><img src="assets/img/logo.svg" class="logo"></a>
 			</div>
 			<div class="col-lg-1">
 				<div class="dropdown">
 					<h4 class="dropbtn">Modes</h4>
 					<div class="dropdown-content">
-						<a href="index.html">Random</a>
-						<a href="createmode.html">Create</a>
-						<a href="monochrome.html">Monochrome</a>
+						<a class="menu" href="random.html">Random</a>
+						<a class="menu" href="createmode.html">Create</a>
+						<a class="menu" href="monochrome.html">Monochrome</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-1">
-				<a href="about.html"><h4>About</h4></a>
+				<a class="menu" href="about.html">
+					<h4>About</h4>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -89,6 +91,12 @@
 
 				<button class="btn btn-primary btnFirstSet noButton">absolutely not</button>
 
+		<!--	<button class="btn btn-primary btnFirstSet inputButton">let me add my own color instead</button>
+				<form class="input">
+					<input type="text" class="inputColor">
+					<input type="submit" value="that's it!" class="btn btn-primary yesInput">
+				</form>
+		-->
 
 				<div class="row">
 					<div class="col-4 text-center">
@@ -121,595 +129,619 @@
 					</div>
 					<div class="col-4 text-center">
 						<button class="btn btn-info btnKindaSet lBButton">less blue</button>
-			</div>
-			<div class="row">
-				<div class="col-4 offset-4 text-center">
-					<button class="btn btn-primary btnKindaSetYes goodButton">looks good!</button>
-					<button class="btn btn-primary btnKindaSetYes good2Button">that's it!</button>
-					<button class="btn btn-primary btnKindaSetYes good3Button">okay!</button>
-					<button class="btn btn-primary btnKindaSetYes good4Button">pick this one!</button>
-					<button class="btn btn-primary btnKindaSetYes good5Button">perfect!</button>
+					</div>
+					<div class="row">
+						<div class="col-4 offset-4 text-center">
+							<button class="btn btn-primary btnKindaSetYes goodButton">looks good!</button>
+							<button class="btn btn-primary btnKindaSetYes good2Button">that's it!</button>
+							<button class="btn btn-primary btnKindaSetYes good3Button">okay!</button>
+							<button class="btn btn-primary btnKindaSetYes good4Button">pick this one!</button>
+							<button class="btn btn-primary btnKindaSetYes good5Button">perfect!</button>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
-	</div>
 
 
-	<div class="container">
-		<div class="row">
-			<div class="col-2 offset-1 g-0">
-				<div class="square square1">
-					<p class="hex hex1"></p>
+			<div class="container">
+				<div class="row">
+					<div class="col-2 offset-1 g-0">
+						<div class="square square1">
+							<p class="hex hex1"></p>
+						</div>
+					</div>
+					<div class="col-2 g-0">
+						<div class="square square2">
+							<p class="hex hex2"></p>
+						</div>
+					</div>
+					<div class="col-2 g-0">
+						<div class="square square3">
+							<p class="hex hex3"></p>
+						</div>
+					</div>
+					<div class="col-2 g-0">
+						<div class="square square4">
+							<p class="hex hex4"></p>
+						</div>
+					</div>
+					<div class="col-2 g-0">
+						<div class="square square5">
+							<p class="hex hex5"></p>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="col-2 g-0">
-				<div class="square square2">
-					<p class="hex hex2"></p>
-				</div>
-			</div>
-			<div class="col-2 g-0">
-				<div class="square square3">
-					<p class="hex hex3"></p>
-				</div>
-			</div>
-			<div class="col-2 g-0">
-				<div class="square square4">
-					<p class="hex hex4"></p>
-				</div>
-			</div>
-			<div class="col-2 g-0">
-				<div class="square square5">
-					<p class="hex hex5"></p>
-				</div>
-			</div>
-		</div>
-	</div>
 
 
-	<script>
-		$(document).ready(function() {
-			$(".btnSecondSet").hide();
-			$(".btnSecondHalfSet").hide();
-			$(".btnThirdSet").hide();
-			$(".btnThirdHalfSet").hide();
-			$(".btnFourthSet").hide();
-			$(".btnFourthHalfSet").hide();
-			$(".btnFifthSet").hide();
-			$(".btnFifthHalfSet").hide();
-			$(".btnKindaSet").hide();
-			$(".btnKindaSetYes").hide();
-		});
-	</script>
+			<script>
+				$(document).ready(function() {
+					$(".btnSecondSet").hide();
+					$(".btnSecondHalfSet").hide();
+					$(".btnThirdSet").hide();
+					$(".btnThirdHalfSet").hide();
+					$(".btnFourthSet").hide();
+					$(".btnFourthHalfSet").hide();
+					$(".btnFifthSet").hide();
+					$(".btnFifthHalfSet").hide();
+					$(".btnKindaSet").hide();
+					$(".btnKindaSetYes").hide();
+					$(".input").hide();
+				});
+			</script>
 
-	<!-- step 1 -->
+			<!-- step 1 -->
 
-	<script>
-		function rgbToHex(R, G, B) {
-			return toHex(R) + toHex(G) + toHex(B)
-		}
-
-		function toHex(n) {
-			n = parseInt(n, 10);
-			if (isNaN(n)) return "00";
-			n = Math.max(0, Math.min(n, 255));
-			return "0123456789ABCDEF".charAt((n - n % 16) / 16) +
-				"0123456789ABCDEF".charAt(n % 16);
-		};
-
-		function genNewColor() {
-
-			var R = Math.floor(Math.random() * 255) + 1
-			var G = Math.floor(Math.random() * 255) + 1
-			var B = Math.floor(Math.random() * 255) + 1
-
-
-			var color = "#" + rgbToHex(R, G, B);
-
-
-			$(".colortester").css("background-color", color);
-
-			console.log(color);
-
-			console.log(R);
-			console.log(G);
-			console.log(B);
-
-			$(".hexcode").text(color);
-
-		}
-
-
-		$(document).ready(function() {
-			genNewColor();
-		});
-
-		$(document).ready(function() {
-			$(".noButton").click(function() {
-				genNewColor();
-				$(".ask").text("How about this one?");
-			});
-		});
-	</script>
-
-
-	<!-- yesButton -->
-
-	<script>
-		$(document).ready(function() {
-			$(".yes1Button").click(function() {
-				var myColor1 = $(".hexcode").text();
-				$(".square1").css("background-color", myColor1);
-				$(".hex1").text(myColor1);
-				$(".ask").text("Perfect! What would you like to do for the second color?");
-				$(".btnFirstSet").hide();
-				$(".btnSecondSet").show();
-			});
-		});
-
-		$(document).ready(function() {
-			$(".newButton").click(function() {
-				genNewColor();
-				$(".ask").text("How does this look?");
-				$(".btnSecondSet").hide();
-				$(".btnSecondHalfSet").show();
-				$(".noButton").show();
-				$(".noButton").text("no way");
-			});
-		});
-
-		$(document).ready(function() {
-			$(".yes2Button").click(function() {
-				var myColor2 = $(".hexcode").text();
-				$(".square2").css("background-color", myColor2);
-				$(".hex2").text(myColor2);
-				$(".ask").text("Awesome! How about the third color?");
-				$(".noButton").hide();
-				$(".btnSecondHalfSet").hide();
-				$(".btnThirdSet").show();
-			});
-		});
-
-		$(document).ready(function() {
-			$(".new3Button").click(function() {
-				genNewColor();
-				$(".ask").text("How about this one?");
-				$(".btnThirdSet").hide();
-				$(".btnThirdHalfSet").show();
-				$(".noButton").show();
-				$(".noButton").text("no thanks");
-			});
-		});
-
-		$(document).ready(function() {
-			$(".yes3Button").click(function() {
-				var myColor3 = $(".hexcode").text();
-				$(".square3").css("background-color", myColor3);
-				$(".hex3").text(myColor3);
-				$(".ask").text("Looking great! Now for a fourth color.");
-				$(".noButton").hide();
-				$(".btnThirdHalfSet").hide();
-				$(".btnFourthSet").show();
-			});
-		});
-
-		$(document).ready(function() {
-			$(".new4Button").click(function() {
-				genNewColor();
-				$(".ask").text("What do you think?");
-				$(".btnFourthSet").hide();
-				$(".btnFourthHalfSet").show();
-				$(".noButton").show();
-				$(".noButton").text("not for me");
-			});
-		});
-
-		$(document).ready(function() {
-			$(".yes4Button").click(function() {
-				var myColor4 = $(".hexcode").text();
-				$(".square4").css("background-color", myColor4);
-				$(".hex4").text(myColor4);
-				$(".ask").text("Almost there! What would you like for your final color?");
-				$(".noButton").hide();
-				$(".btnFourthHalfSet").hide();
-				$(".btnFifthSet").show();
-			});
-		});
-
-		$(document).ready(function() {
-			$(".new5Button").click(function() {
-				genNewColor();
-				$(".ask").text("What do you think?");
-				$(".btnFifthSet").hide();
-				$(".btnFifthHalfSet").show();
-				$(".noButton").show();
-				$(".noButton").text("terrible");
-			});
-		});
-
-		$(document).ready(function() {
-			$(".yes5Button").click(function() {
-				var myColor5 = $(".hexcode").text();
-				$(".square5").css("background-color", myColor5);
-				$(".hex5").text(myColor5);
-				$(".ask").text("You did it! Nice palette. Take a look at the hex codes below to select these colors for your next project.");
-				$(".noButton").hide();
-				$(".btnFifthHalfSet").hide();
-				$(".colortester").hide();
-			});
-		});
-	</script>
-
-
-	<!-- kindaButton -->
-
-	<script>
-		function hexToRGB() {
-
-			var currentCode = $(".hexcode").text();
-
-			R = hexToR(currentCode);
-			G = hexToG(currentCode);
-			B = hexToB(currentCode);
-
-			function hexToR(h) {
-				return parseInt((cutHex(h)).substring(0, 2), 16)
-			}
-
-			function hexToG(h) {
-				return parseInt((cutHex(h)).substring(2, 4), 16)
-			}
-
-			function hexToB(h) {
-				return parseInt((cutHex(h)).substring(4, 6), 16)
-			}
-
-			function cutHex(h) {
-				return (h.charAt(0) == "#") ? h.substring(1, 7) : h
-			}
-
-		};
-
-	$(document).ready(function() {
-		$(".kindaButton").click(function() {
-			hexToRGB();
-			$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
-			$(".rContent").text("r: " + R);
-			$(".gContent").text("g: " + G);
-			$(".bContent").text("r: " + B);
-			$(".btnFirstSet").hide();
-			$(".goodButton").show();
-			$(".btnKindaSet").show();
-		});
-	});
-
-
-		function rgbToHex(R, G, B) {
-			return toHex(R) + toHex(G) + toHex(B)
-		}
-
-		function toHex(n) {
-			n = parseInt(n, 10);
-			if (isNaN(n)) return "00";
-			n = Math.max(0, Math.min(n, 255));
-			return "0123456789ABCDEF".charAt((n - n % 16) / 16) +
-				"0123456789ABCDEF".charAt(n % 16);
-
-		};
-
-		function changeColor() {
-
-			var color = "#" + rgbToHex(R, G, B);
-
-			console.log(R);
-			console.log(G);
-			console.log(B);
-
-			$(".colortester").css("background-color", color);
-			$(".hexcode").text(color);
-
-		}
-		$(document).ready(function() {
-			$(".mRButton").click(function() {
-
-				var r = R += 5
-
-				if (r <= 255) {
-					$(".rContent").text("r: " + r);
-					changeColor();
-
-				} else {
-					$(".rContent").text("r: 255");
+			<script>
+				function rgbToHex(R, G, B) {
+					return toHex(R) + toHex(G) + toHex(B)
 				}
-			});
-		});
 
-		$(document).ready(function() {
-			$(".lRButton").click(function() {
+				function toHex(n) {
+					n = parseInt(n, 10);
+					if (isNaN(n)) return "00";
+					n = Math.max(0, Math.min(n, 255));
+					return "0123456789ABCDEF".charAt((n - n % 16) / 16) +
+						"0123456789ABCDEF".charAt(n % 16);
+				};
 
-				var r = R -= 5
+				function genNewColor() {
 
-				if (r >= 0) {
-					$(".rContent").text("r: " + r);
-					changeColor();
+					var R = Math.floor(Math.random() * 255) + 1
+					var G = Math.floor(Math.random() * 255) + 1
+					var B = Math.floor(Math.random() * 255) + 1
 
-				} else {
-					$(".rContent").text("r: 0");
+
+					var color = "#" + rgbToHex(R, G, B);
+
+
+					$(".colortester").css("background-color", color);
+
+					console.log(color);
+
+					console.log(R);
+					console.log(G);
+					console.log(B);
+
+					$(".hexcode").text(color);
+
 				}
-			});
-		});
 
-		$(document).ready(function() {
-			$(".mGButton").click(function() {
 
-				var g = G += 5
+				$(document).ready(function() {
+					genNewColor();
+				});
 
-				if (g <= 255) {
-					$(".gContent").text("g: " + g);
-					changeColor();
+				$(document).ready(function() {
+					$(".noButton").click(function() {
+						genNewColor();
+						$(".ask").text("How about this one?");
+					});
+				});
+			</script>
 
-				} else {
-					$(".gContent").text("g: 255");
+
+			<!-- yesButton -->
+
+			<script>
+				$(document).ready(function() {
+					$(".yes1Button").click(function() {
+						var myColor1 = $(".hexcode").text();
+						$(".square1").css("background-color", myColor1);
+						$(".hex1").text(myColor1);
+						$(".ask").text("Perfect! What would you like to do for the second color?");
+						$(".btnFirstSet").hide();
+						$(".btnSecondSet").show();
+					});
+				});
+
+				$(document).ready(function() {
+					$(".newButton").click(function() {
+						genNewColor();
+						$(".ask").text("How does this look?");
+						$(".btnSecondSet").hide();
+						$(".btnSecondHalfSet").show();
+						$(".noButton").show();
+						$(".noButton").text("no way");
+					});
+				});
+
+				$(document).ready(function() {
+					$(".yes2Button").click(function() {
+						var myColor2 = $(".hexcode").text();
+						$(".square2").css("background-color", myColor2);
+						$(".hex2").text(myColor2);
+						$(".ask").text("Awesome! How about the third color?");
+						$(".noButton").hide();
+						$(".btnSecondHalfSet").hide();
+						$(".btnThirdSet").show();
+					});
+				});
+
+				$(document).ready(function() {
+					$(".new3Button").click(function() {
+						genNewColor();
+						$(".ask").text("How about this one?");
+						$(".btnThirdSet").hide();
+						$(".btnThirdHalfSet").show();
+						$(".noButton").show();
+						$(".noButton").text("no thanks");
+					});
+				});
+
+				$(document).ready(function() {
+					$(".yes3Button").click(function() {
+						var myColor3 = $(".hexcode").text();
+						$(".square3").css("background-color", myColor3);
+						$(".hex3").text(myColor3);
+						$(".ask").text("Looking great! Now for a fourth color.");
+						$(".noButton").hide();
+						$(".btnThirdHalfSet").hide();
+						$(".btnFourthSet").show();
+					});
+				});
+
+				$(document).ready(function() {
+					$(".new4Button").click(function() {
+						genNewColor();
+						$(".ask").text("What do you think?");
+						$(".btnFourthSet").hide();
+						$(".btnFourthHalfSet").show();
+						$(".noButton").show();
+						$(".noButton").text("not for me");
+					});
+				});
+
+				$(document).ready(function() {
+					$(".yes4Button").click(function() {
+						var myColor4 = $(".hexcode").text();
+						$(".square4").css("background-color", myColor4);
+						$(".hex4").text(myColor4);
+						$(".ask").text("Almost there! What would you like for your final color?");
+						$(".noButton").hide();
+						$(".btnFourthHalfSet").hide();
+						$(".btnFifthSet").show();
+					});
+				});
+
+				$(document).ready(function() {
+					$(".new5Button").click(function() {
+						genNewColor();
+						$(".ask").text("What do you think?");
+						$(".btnFifthSet").hide();
+						$(".btnFifthHalfSet").show();
+						$(".noButton").show();
+						$(".noButton").text("terrible");
+					});
+				});
+
+				$(document).ready(function() {
+					$(".yes5Button").click(function() {
+						var myColor5 = $(".hexcode").text();
+						$(".square5").css("background-color", myColor5);
+						$(".hex5").text(myColor5);
+						$(".ask").text("You did it! Nice palette. Take a look at the hex codes below to select these colors for your next project.");
+						$(".noButton").hide();
+						$(".btnFifthHalfSet").hide();
+						$(".colortester").hide();
+					});
+				});
+			</script>
+
+
+			<!-- kindaButton -->
+
+			<script>
+				function hexToRGB() {
+
+					var currentCode = $(".hexcode").text();
+
+					R = hexToR(currentCode);
+					G = hexToG(currentCode);
+					B = hexToB(currentCode);
+
+					function hexToR(h) {
+						return parseInt((cutHex(h)).substring(0, 2), 16)
+					}
+
+					function hexToG(h) {
+						return parseInt((cutHex(h)).substring(2, 4), 16)
+					}
+
+					function hexToB(h) {
+						return parseInt((cutHex(h)).substring(4, 6), 16)
+					}
+
+					function cutHex(h) {
+						return (h.charAt(0) == "#") ? h.substring(1, 7) : h
+					}
+
+				};
+
+				$(document).ready(function() {
+					$(".kindaButton").click(function() {
+						hexToRGB();
+						$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
+						$(".rContent").text("r: " + R);
+						$(".gContent").text("g: " + G);
+						$(".bContent").text("r: " + B);
+						$(".btnFirstSet").hide();
+						$(".goodButton").show();
+						$(".btnKindaSet").show();
+					});
+				});
+
+
+				function rgbToHex(R, G, B) {
+					return toHex(R) + toHex(G) + toHex(B)
 				}
-			});
-		});
 
-		$(document).ready(function() {
-			$(".lGButton").click(function() {
+				function toHex(n) {
+					n = parseInt(n, 10);
+					if (isNaN(n)) return "00";
+					n = Math.max(0, Math.min(n, 255));
+					return "0123456789ABCDEF".charAt((n - n % 16) / 16) +
+						"0123456789ABCDEF".charAt(n % 16);
 
-				var g = G -= 5
+				};
 
-				if (g >= 0) {
-					$(".gContent").text("g: " + g);
-					changeColor();
+				function changeColor() {
 
-				} else {
-					$(".gContent").text("g: 0");
+					var color = "#" + rgbToHex(R, G, B);
+
+					console.log(R);
+					console.log(G);
+					console.log(B);
+
+					$(".colortester").css("background-color", color);
+					$(".hexcode").text(color);
+
 				}
+				$(document).ready(function() {
+					$(".mRButton").click(function() {
+
+						var r = R += 5
+
+						if (r <= 255) {
+							$(".rContent").text("r: " + r);
+							changeColor();
+
+						} else {
+							$(".rContent").text("r: 255");
+						}
+					});
+				});
+
+				$(document).ready(function() {
+					$(".lRButton").click(function() {
+
+						var r = R -= 5
+
+						if (r >= 0) {
+							$(".rContent").text("r: " + r);
+							changeColor();
+
+						} else {
+							$(".rContent").text("r: 0");
+						}
+					});
+				});
+
+				$(document).ready(function() {
+					$(".mGButton").click(function() {
+
+						var g = G += 5
+
+						if (g <= 255) {
+							$(".gContent").text("g: " + g);
+							changeColor();
+
+						} else {
+							$(".gContent").text("g: 255");
+						}
+					});
+				});
+
+				$(document).ready(function() {
+					$(".lGButton").click(function() {
+
+						var g = G -= 5
+
+						if (g >= 0) {
+							$(".gContent").text("g: " + g);
+							changeColor();
+
+						} else {
+							$(".gContent").text("g: 0");
+						}
+					});
+				});
+
+				$(document).ready(function() {
+					$(".mBButton").click(function() {
+
+						var b = B += 5
+
+						if (b <= 255) {
+							$(".bContent").text("b: " + b);
+							changeColor();
+
+						} else {
+							$(".bContent").text("b: 255");
+						}
+					});
+				});
+
+				$(document).ready(function() {
+					$(".lBButton").click(function() {
+
+						var b = B -= 5
+
+						if (b >= 0) {
+
+							$(".bContent").text("b: " + b);
+							changeColor();
+
+						} else {
+							$(".bContent").text("b: 0");
+						}
+					});
+				});
+
+				$(document).ready(function() {
+					$(".goodButton").click(function() {
+						var myColor1 = $(".hexcode").text();
+						$(".square1").css("background-color", myColor1);
+						$(".hex1").text(myColor1);
+						$(".ask").text("Perfect! What would you like to do for the second color?");
+						$(".btnKindaSet").hide();
+						$(".goodButton").hide();
+						$(".rContent").hide();
+						$(".gContent").hide();
+						$(".bContent").hide();
+						$(".btnSecondSet").show();
+					});
+				});
+
+				$(document).ready(function() {
+					$(".sameButton").click(function() {
+						hexToRGB();
+						$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
+						$(".rContent").text("r: " + R);
+						$(".gContent").text("g: " + G);
+						$(".bContent").text("r: " + B);
+						$(".btnSecondSet").hide();
+						$(".rContent").show();
+						$(".gContent").show();
+						$(".bContent").show();
+						$(".btnKindaSet").show();
+						$(".good2Button").show();
+					});
+				});
+
+				$(document).ready(function() {
+					$(".good2Button").click(function() {
+						var myColor2 = $(".hexcode").text();
+						$(".square2").css("background-color", myColor2);
+						$(".hex2").text(myColor2);
+						$(".ask").text("Awesome! How about the third color?");
+						$(".good2Button").hide();
+						$(".rContent").hide();
+						$(".gContent").hide();
+						$(".bContent").hide();
+						$(".btnKindaSet").hide();
+						$(".btnThirdSet").show();
+					});
+				});
+
+				$(document).ready(function() {
+					$(".same3Button").click(function() {
+						hexToRGB();
+						$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
+						$(".rContent").text("r: " + R);
+						$(".gContent").text("g: " + G);
+						$(".bContent").text("r: " + B);
+						$(".btnThirdSet").hide();
+						$(".rContent").show();
+						$(".gContent").show();
+						$(".bContent").show();
+						$(".btnKindaSet").show();
+						$(".good3Button").show();
+					});
+				});
+
+				$(document).ready(function() {
+					$(".good3Button").click(function() {
+						var myColor3 = $(".hexcode").text();
+						$(".square3").css("background-color", myColor3);
+						$(".hex3").text(myColor3);
+						$(".ask").text("Looking great! Now for a fourth color.");
+						$(".good3Button").hide();
+						$(".rContent").hide();
+						$(".gContent").hide();
+						$(".bContent").hide();
+						$(".btnKindaSet").hide();
+						$(".btnFourthSet").show();
+					});
+				});
+
+				$(document).ready(function() {
+					$(".same4Button").click(function() {
+						hexToRGB();
+						$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
+						$(".rContent").text("r: " + R);
+						$(".gContent").text("g: " + G);
+						$(".bContent").text("r: " + B);
+						$(".btnFourthSet").hide();
+						$(".rContent").show();
+						$(".gContent").show();
+						$(".bContent").show();
+						$(".btnKindaSet").show();
+						$(".good4Button").show();
+					});
+				});
+
+				$(document).ready(function() {
+					$(".good4Button").click(function() {
+						var myColor4 = $(".hexcode").text();
+						$(".square4").css("background-color", myColor4);
+						$(".hex4").text(myColor4);
+						$(".ask").text("Almost there! What would you like for your final color?");
+						$(".good4Button").hide();
+						$(".rContent").hide();
+						$(".gContent").hide();
+						$(".bContent").hide();
+						$(".btnKindaSet").hide();
+						$(".btnFifthSet").show();
+					});
+				});
+
+				$(document).ready(function() {
+					$(".same5Button").click(function() {
+						hexToRGB();
+						$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
+						$(".rContent").text("r: " + R);
+						$(".gContent").text("g: " + G);
+						$(".bContent").text("r: " + B);
+						$(".btnFifthSet").hide();
+						$(".rContent").show();
+						$(".gContent").show();
+						$(".bContent").show();
+						$(".btnKindaSet").show();
+						$(".good5Button").show();
+					});
+				});
+
+				$(document).ready(function() {
+					$(".good5Button").click(function() {
+						var myColor5 = $(".hexcode").text();
+						$(".square5").css("background-color", myColor5);
+						$(".hex5").text(myColor5);
+						$(".ask").text("You did it! Nice palette. Take a look at the hex codes below to select these colors for your next project.");
+						$(".good5Button").hide();
+						$(".rContent").hide();
+						$(".gContent").hide();
+						$(".bContent").hide();
+						$(".btnKindaSet").hide();
+						$(".colortester").hide();
+					});
+				});
+
+				// random then manipulate //
+
+				$(document).ready(function() {
+					$(".kinda2Button").click(function() {
+						hexToRGB();
+						$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
+						$(".rContent").text("r: " + R);
+						$(".gContent").text("g: " + G);
+						$(".bContent").text("r: " + B);
+						$(".btnSecondHalfSet").hide();
+						$(".noButton").hide();
+						$(".rContent").show();
+						$(".gContent").show();
+						$(".bContent").show();
+						$(".btnKindaSet").show();
+						$(".good2Button").show();
+					});
+				});
+
+				$(document).ready(function() {
+					$(".kinda3Button").click(function() {
+						hexToRGB();
+						$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
+						$(".rContent").text("r: " + R);
+						$(".gContent").text("g: " + G);
+						$(".bContent").text("r: " + B);
+						$(".btnThirdHalfSet").hide();
+						$(".noButton").hide();
+						$(".rContent").show();
+						$(".gContent").show();
+						$(".bContent").show();
+						$(".btnKindaSet").show();
+						$(".good3Button").show();
+					});
+				});
+
+				$(document).ready(function() {
+					$(".kinda4Button").click(function() {
+						hexToRGB();
+						$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
+						$(".rContent").text("r: " + R);
+						$(".gContent").text("g: " + G);
+						$(".bContent").text("r: " + B);
+						$(".btnFourthHalfSet").hide();
+						$(".noButton").hide();
+						$(".rContent").show();
+						$(".gContent").show();
+						$(".bContent").show();
+						$(".btnKindaSet").show();
+						$(".good4Button").show();
+					});
+				});
+
+				$(document).ready(function() {
+					$(".kinda5Button").click(function() {
+						hexToRGB();
+						$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
+						$(".rContent").text("r: " + R);
+						$(".gContent").text("g: " + G);
+						$(".bContent").text("r: " + B);
+						$(".btnFifthHalfSet").hide();
+						$(".noButton").hide();
+						$(".rContent").show();
+						$(".gContent").show();
+						$(".bContent").show();
+						$(".btnKindaSet").show();
+						$(".good5Button").show();
+					});
+				});
+			</script>
+
+
+			<!-- input button
+
+			<script>
+
+			$(document).ready(function() {
+				$(".inputButton").click(function() {
+					$(".ask").text("Enter a Hex code for a color below. Click the About tab above to learn more about Hex codes.");
+					$(".btnFirstSet").hide();
+					$(".input").show();
+				});
 			});
-		});
 
-		$(document).ready(function() {
-			$(".mBButton").click(function() {
+			$(document).ready(function() {
+				$(".yesInput").click(function() {
+					$(".ask").text("Enter a Hex code for a color below. Click the About tab above to learn more about Hex codes.");
+					$(".square1").css("background-color", ".inputColor");
+					$(".hexcode1").text(".inputColor");
 
-				var b = B += 5
-
-				if (b <= 255) {
-					$(".bContent").text("b: " + b);
-					changeColor();
-
-				} else {
-					$(".bContent").text("b: 255");
-				}
+				});
 			});
-		});
+		</script>
 
-		$(document).ready(function() {
-			$(".lBButton").click(function() {
-
-				var b = B -= 5
-
-				if (b >= 0) {
-
-					$(".bContent").text("b: " + b);
-					changeColor();
-
-				} else {
-					$(".bContent").text("b: 0");
-				}
-			});
-		});
-
-		$(document).ready(function() {
-			$(".goodButton").click(function() {
-				var myColor1 = $(".hexcode").text();
-				$(".square1").css("background-color", myColor1);
-				$(".hex1").text(myColor1);
-				$(".ask").text("Perfect! What would you like to do for the second color?");
-				$(".btnKindaSet").hide();
-				$(".goodButton").hide();
-				$(".rContent").hide();
-				$(".gContent").hide();
-				$(".bContent").hide();
-				$(".btnSecondSet").show();
-			});
-		});
-
-		$(document).ready(function() {
-			$(".sameButton").click(function() {
-				hexToRGB();
-				$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
-				$(".rContent").text("r: " + R);
-				$(".gContent").text("g: " + G);
-				$(".bContent").text("r: " + B);
-				$(".btnSecondSet").hide();
-				$(".rContent").show();
-				$(".gContent").show();
-				$(".bContent").show();
-				$(".btnKindaSet").show();
-				$(".good2Button").show();
-			});
-		});
-
-		$(document).ready(function() {
-			$(".good2Button").click(function() {
-				var myColor2 = $(".hexcode").text();
-				$(".square2").css("background-color", myColor2);
-				$(".hex2").text(myColor2);
-				$(".ask").text("Awesome! How about the third color?");
-				$(".good2Button").hide();
-				$(".rContent").hide();
-				$(".gContent").hide();
-				$(".bContent").hide();
-				$(".btnKindaSet").hide();
-				$(".btnThirdSet").show();
-			});
-		});
-
-		$(document).ready(function() {
-			$(".same3Button").click(function() {
-				hexToRGB();
-				$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
-				$(".rContent").text("r: " + R);
-				$(".gContent").text("g: " + G);
-				$(".bContent").text("r: " + B);
-				$(".btnThirdSet").hide();
-				$(".rContent").show();
-				$(".gContent").show();
-				$(".bContent").show();
-				$(".btnKindaSet").show();
-				$(".good3Button").show();
-			});
-		});
-
-		$(document).ready(function() {
-			$(".good3Button").click(function() {
-				var myColor3 = $(".hexcode").text();
-				$(".square3").css("background-color", myColor3);
-				$(".hex3").text(myColor3);
-				$(".ask").text("Looking great! Now for a fourth color.");
-				$(".good3Button").hide();
-				$(".rContent").hide();
-				$(".gContent").hide();
-				$(".bContent").hide();
-				$(".btnKindaSet").hide();
-				$(".btnFourthSet").show();
-			});
-		});
-
-		$(document).ready(function() {
-			$(".same4Button").click(function() {
-				hexToRGB();
-				$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
-				$(".rContent").text("r: " + R);
-				$(".gContent").text("g: " + G);
-				$(".bContent").text("r: " + B);
-				$(".btnFourthSet").hide();
-				$(".rContent").show();
-				$(".gContent").show();
-				$(".bContent").show();
-				$(".btnKindaSet").show();
-				$(".good4Button").show();
-			});
-		});
-
-		$(document).ready(function() {
-			$(".good4Button").click(function() {
-				var myColor4 = $(".hexcode").text();
-				$(".square4").css("background-color", myColor4);
-				$(".hex4").text(myColor4);
-				$(".ask").text("Almost there! What would you like for your final color?");
-				$(".good4Button").hide();
-				$(".rContent").hide();
-				$(".gContent").hide();
-				$(".bContent").hide();
-				$(".btnKindaSet").hide();
-				$(".btnFifthSet").show();
-			});
-		});
-
-		$(document).ready(function() {
-			$(".same5Button").click(function() {
-				hexToRGB();
-				$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
-				$(".rContent").text("r: " + R);
-				$(".gContent").text("g: " + G);
-				$(".bContent").text("r: " + B);
-				$(".btnFifthSet").hide();
-				$(".rContent").show();
-				$(".gContent").show();
-				$(".bContent").show();
-				$(".btnKindaSet").show();
-				$(".good5Button").show();
-			});
-		});
-
-		$(document).ready(function() {
-			$(".good5Button").click(function() {
-				var myColor5 = $(".hexcode").text();
-				$(".square5").css("background-color", myColor5);
-				$(".hex5").text(myColor5);
-				$(".ask").text("You did it! Nice palette. Take a look at the hex codes below to select these colors for your next project.");
-				$(".good5Button").hide();
-				$(".rContent").hide();
-				$(".gContent").hide();
-				$(".bContent").hide();
-				$(".btnKindaSet").hide();
-				$(".colortester").hide();
-			});
-		});
-
-	// random then manipulate //
-
-		$(document).ready(function() {
-			$(".kinda2Button").click(function() {
-				hexToRGB();
-				$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
-				$(".rContent").text("r: " + R);
-				$(".gContent").text("g: " + G);
-				$(".bContent").text("r: " + B);
-				$(".btnSecondHalfSet").hide();
-				$(".noButton").hide();
-				$(".rContent").show();
-				$(".gContent").show();
-				$(".bContent").show();
-				$(".btnKindaSet").show();
-				$(".good2Button").show();
-			});
-		});
-
-		$(document).ready(function() {
-			$(".kinda3Button").click(function() {
-				hexToRGB();
-				$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
-				$(".rContent").text("r: " + R);
-				$(".gContent").text("g: " + G);
-				$(".bContent").text("r: " + B);
-				$(".btnThirdHalfSet").hide();
-				$(".noButton").hide();
-				$(".rContent").show();
-				$(".gContent").show();
-				$(".bContent").show();
-				$(".btnKindaSet").show();
-				$(".good3Button").show();
-			});
-		});
-
-		$(document).ready(function() {
-			$(".kinda4Button").click(function() {
-				hexToRGB();
-				$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
-				$(".rContent").text("r: " + R);
-				$(".gContent").text("g: " + G);
-				$(".bContent").text("r: " + B);
-				$(".btnFourthHalfSet").hide();
-				$(".noButton").hide();
-				$(".rContent").show();
-				$(".gContent").show();
-				$(".bContent").show();
-				$(".btnKindaSet").show();
-				$(".good4Button").show();
-			});
-		});
-
-		$(document).ready(function() {
-			$(".kinda5Button").click(function() {
-				hexToRGB();
-				$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
-				$(".rContent").text("r: " + R);
-				$(".gContent").text("g: " + G);
-				$(".bContent").text("r: " + B);
-				$(".btnFifthHalfSet").hide();
-				$(".noButton").hide();
-				$(".rContent").show();
-				$(".gContent").show();
-				$(".bContent").show();
-				$(".btnKindaSet").show();
-				$(".good5Button").show();
-			});
-		});
-
-	</script>
-
+-->
 
 </body>
 

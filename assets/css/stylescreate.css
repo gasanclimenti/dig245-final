@@ -20,19 +20,20 @@ h4 {
 .instructions {
   border-radius: 100px;
   border: 3px solid #4CCCE9;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
 }
 
 .question {
   border-radius: 100px;
   border: 3px solid #4CCCE9;
   width: 50%;
-  height: 100%
-}
-
-.ask {
-  margin: 1rem;
+  height: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
 }
 
 .btn-primary {

@@ -14,7 +14,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
 
-	<title>Random Mode</title>
+	<title>Color Generate</title>
 </head>
 
 <body>
@@ -29,113 +29,45 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-10">
-				<img src="assets/img/logo.svg" class="logo">
+			<div class="col-10">
+				<a href="index.html"><img src="assets/img/logo.svg" class="logo"></a>
 			</div>
-			<div class="col-lg-1">
+			<div class="col-1">
 				<div class="dropdown">
 					<h4 class="dropbtn">Modes</h4>
 					<div class="dropdown-content">
-						<a href="index.html">Random</a>
-						<a href="createmode.html">Create</a>
-						<a href="monochrome.html">Monochrome</a>
+						<a class="menu" href="random.html">Random</a>
+						<a class="menu" href="createmode.html">Create</a>
+						<a class="menu" href="monochrome.html">Monochrome</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-1">
-				<a href="about.html"><h4>About</h4></a>
+			<div class="col-1">
+				<a class="menu" href="about.html"><h4>About</h4></a>
 			</div>
 		</div>
 	</div>
 
 
 
-	<div class="container">
-		<p class="instructions">This is random mode! Click the generate button below to create a completely randomly-generized palette of five colors each time. See where the math can take you.</p>
-	</div>
+	<div class="container welcome">
+    <div class="row">
+		  <p>Welcome to Color Generate!</p>
+    </div>
+		<div class="row">
+		  <p>Create amazing color palettes to suit all of your design needs.</p>
+    </div>
+    <div class="row">
+		  <p>Click on a link below to get started!</p>
+    </div>
+  </div>
 
 	<div class="container text-center">
-		<button class="btn btn-primary genButton">Generate!</button>
+		<button class="btn" id="start"><a href="random.html">Random Mode</a></button>
+    <button class="btn" id="start"><a href="createmode.html">Create Mode</a></button>
+    <button class="btn" id="start"><a href="monochrome.html">Monochrome Mode</a></button>
 	</div>
 
-
-
-	<div class="container">
-		<div class="row">
-			<div class="col-2 offset-1 g-0">
-				<div class="square square1">
-					<p class="hexcode hexcode1">hexcode</p>
-				</div>
-			</div>
-			<div class="col-2 g-0">
-				<div class="square square2">
-					<p class="hexcode hexcode2">hexcode</p>
-				</div>
-			</div>
-			<div class="col-2 g-0">
-				<div class="square square3">
-					<p class="hexcode hexcode3">hexcode</p>
-				</div>
-			</div>
-			<div class="col-2 g-0">
-				<div class="square square4">
-					<p class="hexcode hexcode4">hexcode</p>
-				</div>
-			</div>
-			<div class="col-2 g-0">
-				<div class="square square5">
-					<p class="hexcode hexcode5">hexcode</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-	<script>
-		function rgbToHex(R, G, B) {
-			return toHex(R) + toHex(G) + toHex(B)
-		}
-
-		function toHex(n) {
-			n = parseInt(n, 10);
-			if (isNaN(n)) return "00";
-			n = Math.max(0, Math.min(n, 255));
-			return "0123456789ABCDEF".charAt((n - n % 16) / 16) +
-				"0123456789ABCDEF".charAt(n % 16);
-		};
-
-		function genNewColor() {
-
-			for (var i = 1; i <= 5; i++) {
-
-				var R = Math.floor(Math.random() * 255) + 1
-				var G = Math.floor(Math.random() * 255) + 1
-				var B = Math.floor(Math.random() * 255) + 1
-
-
-				var color = "#" + rgbToHex(R, G, B);
-
-				$(".square" + i).css("background-color", color);
-
-				console.log(color);
-
-				console.log(R);
-				console.log(G);
-				console.log(B);
-
-				$(".hexcode" + i).text(color);
-			}
-
-		}
-
-		genNewColor();
-		$(document).ready(function() {
-			$("button").click(function() {
-				genNewColor();
-
-			});
-		});
-	</script>
 
 
 </body>

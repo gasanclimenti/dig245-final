@@ -28,27 +28,25 @@
 
 
   <div class="container">
-    <div class="row">
-      <div class="col-lg-10">
-        <img src="assets/img/logo.svg" class="logo">
-      </div>
-      <div class="col-lg-1">
-        <div class="dropdown">
-          <h4 class="dropbtn">Modes</h4>
-          <div class="dropdown-content">
-            <a href="index.html">Random</a>
-            <a href="createmode.html">Create</a>
-            <a href="monochrome.html">Monochrome</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-1">
-        <a href="about.html">
-          <h4>About</h4>
-        </a>
-      </div>
-    </div>
-  </div>
+		<div class="row">
+			<div class="col-lg-10">
+				<a href="index.html"><img src="assets/img/logo.svg" class="logo"></a>
+			</div>
+			<div class="col-lg-1">
+				<div class="dropdown">
+					<h4 class="dropbtn">Modes</h4>
+					<div class="dropdown-content">
+						<a class="menu" href="random.html">Random</a>
+						<a class="menu" href="createmode.html">Create</a>
+						<a class="menu" href="monochrome.html">Monochrome</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-1">
+				<a class="menu" href="about.html"><h4>About</h4></a>
+			</div>
+		</div>
+	</div>
 
 
 
@@ -126,6 +124,65 @@
         $(".btnChange").hide();
       });
 
+
+  function hexToRGB1() {
+
+        var currentCode = $(".hex1").text();
+
+        R = hexToR(currentCode);
+        G = hexToG(currentCode);
+        B = hexToB(currentCode);
+
+        function hexToR(h) {
+          return parseInt((cutHex(h)).substring(0, 2), 16)
+        }
+
+        function hexToG(h) {
+          return parseInt((cutHex(h)).substring(2, 4), 16)
+        }
+
+        function hexToB(h) {
+          return parseInt((cutHex(h)).substring(4, 6), 16)
+        }
+
+        function cutHex(h) {
+          return (h.charAt(0) == "#") ? h.substring(1, 7) : h
+        }
+
+        console.log(currentCode);
+        console.log(R);
+
+      };
+
+      function hexToRGB2() {
+
+            var currentCode = $(".hex2").text();
+
+            R = hexToR(currentCode);
+            G = hexToG(currentCode);
+            B = hexToB(currentCode);
+
+            function hexToR(h) {
+              return parseInt((cutHex(h)).substring(0, 2), 16)
+            }
+
+            function hexToG(h) {
+              return parseInt((cutHex(h)).substring(2, 4), 16)
+            }
+
+            function hexToB(h) {
+              return parseInt((cutHex(h)).substring(4, 6), 16)
+            }
+
+            function cutHex(h) {
+              return (h.charAt(0) == "#") ? h.substring(1, 7) : h
+            }
+
+            console.log(currentCode);
+            console.log(R)
+
+          };
+
       $(document).ready(function() {
         $(".red").click(function() {
           $(".square1").css("background-color", "#ff0000");
@@ -139,18 +196,119 @@
           $(".square5").css("background-color", "#370000");
           $(".hex5").text("#370000");
           $(".btnPick").hide();
+          $(".btnChange").show();
+          $(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the palette. Check out the About tab at the top of the page to learn more about RGB codes.");
+          hexToRGB1();
+          hexToRGB2();
         });
       });
 
-    $(document).ready(function() {
-      $(".red").click(function() {
-        $(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the palette. Check out the About tab at the top of the page to learn more about RGB codes.");
-        $(".rContent").text("r: " + R);
-        $(".gContent").text("g: " + G);
-        $(".bContent").text("r: " + B);
-        $(".btnChange").show();
-      });
-    });
+    		function rgbToHex(R, G, B) {
+    			return toHex(R) + toHex(G) + toHex(B);
+    		}
+
+    		function toHex(n) {
+    			n = parseInt(n, 10);
+    			if (isNaN(n)) return "00";
+    			n = Math.max(0, Math.min(n, 255));
+    			return "0123456789ABCDEF".charAt((n - n % 16) / 16) +
+    				"0123456789ABCDEF".charAt(n % 16);
+
+    		};
+
+    		function changeColor() {
+
+    			var color = "#" + rgbToHex(R, G, B);
+
+    			$(".square" ).css("background-color", color);
+    			$(".hex").text(color);
+
+          console.log(R);
+
+        };
+
+
+    		$(document).ready(function() {
+    			$(".mRButton").click(function() {
+
+    				var r = R += 5
+
+    				if (r <= 255) {
+    					changeColor();
+
+    				} else {
+    					var r = 255;
+    				}
+    			});
+    		});
+
+    		$(document).ready(function() {
+    			$(".lRButton").click(function() {
+
+    				var r = R -= 5
+
+    				if (r >= 0) {
+    					changeColor();
+    				}
+
+    			});
+    		});
+
+    		$(document).ready(function() {
+    			$(".mGButton").click(function() {
+
+    				var g = G += 5
+
+    				if (g <= 255) {
+    					changeColor();
+
+    				} else {
+    					var g = 255;
+    				}
+    			});
+    		});
+
+    		$(document).ready(function() {
+    			$(".lGButton").click(function() {
+
+    				var g = G -= 5
+
+    				if (g >= 0) {
+    					changeColor();
+
+    				} else {
+    					var g = 0
+    				}
+    			});
+    		});
+
+    		$(document).ready(function() {
+    			$(".mBButton").click(function() {
+
+    				var b = B += 5
+
+    				if (b <= 255) {
+    					changeColor();
+
+    				} else {
+    					var b = 255;
+    				}
+    			});
+    		});
+
+    		$(document).ready(function() {
+    			$(".lBButton").click(function() {
+
+    				var b = B -= 5
+
+    				if (b >= 0) {
+    					changeColor();
+
+    				} else {
+    					var b = 0;
+    				}
+    			});
+    		});
 
     </script>
 

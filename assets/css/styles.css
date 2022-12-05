@@ -13,15 +13,56 @@ h4 {
   margin-top: 30px;
 }
 
-.logo  {
-  margin-right: 40px;
+.welcome {
+  border-radius: 100px;
+  border: 3px solid #4CCCE9;
+  width: 40%;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+#start {
+  font-family: "Lobster";
+  font-size: 20px;
+  background-color: #A4E94C;
+}
+
+#start:hover {
+  background-color: #89c23e;
 }
 
 .instructions {
   border-radius: 100px;
   border: 3px solid #4CCCE9;
-  margin: 10px 30px 30px 10px;
   width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.about {
+  border-radius: 100px;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+}
+
+.about1 {
+  border: 3px solid #4CCCE9;
+}
+
+.about2 {
+  border: 3px solid #C04CE9;
+}
+
+.about3 {
+  border: 3px solid #DA4E4E;
+}
+
+.about4 {
+  border: 3px solid #A4E94C;
 }
 
 .btn {
@@ -84,7 +125,7 @@ h4 {
 
 .dropdown:hover .dropbtn {background-color: #4CCCE9;}
 
-a {
+.menu {
   text-decoration: none;
   color: black;
-}
+};
