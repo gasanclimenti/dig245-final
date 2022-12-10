@@ -28,22 +28,24 @@
 
 
 	<div class="container">
-		<div class="row">
-			<div class="col-10">
+		<div class="row gx-5">
+			<div class="col-lg-10 col-sm-8">
 				<a href="index.html"><img src="assets/img/logo.svg" class="logo"></a>
 			</div>
-			<div class="col-1">
+			<div class="col-lg-1 col-sm-2">
 				<div class="dropdown">
 					<h4 class="dropbtn">Modes</h4>
 					<div class="dropdown-content">
 						<a class="menu" href="random.html">Random</a>
 						<a class="menu" href="createmode.html">Create</a>
-						<a class="menu" href="monochrome.html">Monochrome</a>
+						<a class="menu" href="monochrome.html">Pre-Set</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-1">
-				<a class="menu" href="about.html"><h4>About</h4></a>
+			<div class="col-lg-1 col-sm-2">
+				<a class="menu" href="about.html">
+					<h4>About</h4>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -62,30 +64,50 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-2 offset-1 g-0">
+			<div class="col-sm-2 offset-1 g-0">
 				<div class="square square1">
 					<p class="hexcode hexcode1">hexcode</p>
 				</div>
 			</div>
-			<div class="col-2 g-0">
+			<div class="col-sm-2 g-0">
 				<div class="square square2">
 					<p class="hexcode hexcode2">hexcode</p>
 				</div>
 			</div>
-			<div class="col-2 g-0">
+			<div class="col-sm-2 g-0">
 				<div class="square square3">
 					<p class="hexcode hexcode3">hexcode</p>
 				</div>
 			</div>
-			<div class="col-2 g-0">
+			<div class="col-sm-2 g-0">
 				<div class="square square4">
 					<p class="hexcode hexcode4">hexcode</p>
 				</div>
 			</div>
-			<div class="col-2 g-0">
+			<div class="col-sm-2 g-0">
 				<div class="square square5">
 					<p class="hexcode hexcode5">hexcode</p>
 				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-2 offset-1 text-center">
+				<img src="assets/img/forward.svg" class="shift forward1">
+			</div>
+			<div class="col-sm-2 text-center">
+				<img src="assets/img/back.svg" class="shift back2">
+				<img src="assets/img/forward.svg" class="shift forward2">
+			</div>
+			<div class="col-sm-2 text-center">
+				<img src="assets/img/back.svg" class="shift back3">
+				<img src="assets/img/forward.svg" class="shift forward3">
+			</div>
+			<div class="col-sm-2 text-center">
+				<img src="assets/img/back.svg" class="shift back4">
+				<img src="assets/img/forward.svg" class="shift forward4">
+			</div>
+			<div class="col-sm-2 text-center">
+				<img src="assets/img/back.svg" class="shift back5">
 			</div>
 		</div>
 	</div>
@@ -137,29 +159,135 @@
 
 		function hexToRGB() {
 
-				var currentCode = $(".hexcode").text();
+			var currentCode = $(".hexcode").text();
 
-				R = hexToR(currentCode);
-				G = hexToG(currentCode);
-				B = hexToB(currentCode);
+			R = hexToR(currentCode);
+			G = hexToG(currentCode);
+			B = hexToB(currentCode);
 
-				function hexToR(h) {
-					return parseInt((cutHex(h)).substring(0, 2), 16)
-				}
+			function hexToR(h) {
+				return parseInt((cutHex(h)).substring(0, 2), 16)
+			}
 
-				function hexToG(h) {
-					return parseInt((cutHex(h)).substring(2, 4), 16)
-				}
+			function hexToG(h) {
+				return parseInt((cutHex(h)).substring(2, 4), 16)
+			}
 
-				function hexToB(h) {
-					return parseInt((cutHex(h)).substring(4, 6), 16)
-				}
+			function hexToB(h) {
+				return parseInt((cutHex(h)).substring(4, 6), 16)
+			}
 
-				function cutHex(h) {
-					return (h.charAt(0) == "#") ? h.substring(1, 7) : h
-				}
+			function cutHex(h) {
+				return (h.charAt(0) == "#") ? h.substring(1, 7) : h
+			}
 		}
+	</script>
 
+	<!-- moving colors -->
+	<script>
+		$(document).ready(function() {
+			$(".forward1").click(function() {
+				var myColor1 = $(".hexcode1").text();
+				var myColor2 = $(".hexcode2").text();
+				$(".square1").css("background-color", myColor2);
+				$(".hexcode1").text(myColor2);
+				$(".square2").css("background-color", myColor1);
+				$(".hexcode2").text(myColor1);
+			});
+		});
+
+		$(document).ready(function() {
+			$(".forward2").click(function() {
+				var myColor2 = $(".hexcode2").text();
+				var myColor3 = $(".hexcode3").text();
+				$(".square2").css("background-color", myColor3);
+				$(".hexcode2").text(myColor3);
+				$(".square3").css("background-color", myColor2);
+				$(".hexcode3").text(myColor2);
+			});
+		});
+
+		$(document).ready(function() {
+			$(".forward3").click(function() {
+				var myColor3 = $(".hexcode3").text();
+				var myColor4 = $(".hexcode4").text();
+				$(".square3").css("background-color", myColor4);
+				$(".hexcode3").text(myColor4);
+				$(".square4").css("background-color", myColor3);
+				$(".hexcode4").text(myColor3);
+			});
+		});
+
+
+		$(document).ready(function() {
+			$(".forward4").click(function() {
+				var myColor4 = $(".hexcode4").text();
+				var myColor5 = $(".hexcode5").text();
+				$(".square4").css("background-color", myColor5);
+				$(".hexcode4").text(myColor5);
+				$(".square5").css("background-color", myColor4);
+				$(".hexcode5").text(myColor4);
+			});
+		});
+
+		$(document).ready(function() {
+			$(".forward5").click(function() {
+				var myColor4 = $(".hexcode4").text();
+				var myColor5 = $(".hexcode5").text();
+				$(".square4").css("background-color", myColor5);
+				$(".hexcode4").text(myColor5);
+				$(".square5").css("background-color", myColor4);
+				$(".hexcode5").text(myColor4);
+			});
+		});
+
+		$(document).ready(function() {
+			$(".back2").click(function() {
+				var myColor1 = $(".hexcode1").text();
+				var myColor2 = $(".hexcode2").text();
+				$(".square1").css("background-color", myColor2);
+				$(".hexcode1").text(myColor2);
+				$(".square2").css("background-color", myColor1);
+				$(".hexcode2").text(myColor1);
+			});
+		});
+
+		$(document).ready(function() {
+			$(".back3").click(function() {
+				var myColor2 = $(".hexcode2").text();
+				var myColor3 = $(".hexcode3").text();
+				$(".square2").css("background-color", myColor3);
+				$(".hexcode2").text(myColor3);
+				$(".square3").css("background-color", myColor2);
+				$(".hexcode3").text(myColor2);
+			});
+		});
+
+		$(document).ready(function() {
+			$(".back4").click(function() {
+				var myColor4 = $(".hexcode4").text();
+				var myColor3 = $(".hexcode3").text();
+				$(".square3").css("background-color", myColor4);
+				$(".hexcode3").text(myColor4);
+				$(".square4").css("background-color", myColor3);
+				$(".hexcode4").text(myColor3);
+			});
+		});
+
+		$(document).ready(function() {
+			$(".back5").click(function() {
+				var myColor4 = $(".hexcode4").text();
+				var myColor5 = $(".hexcode5").text();
+				$(".square4").css("background-color", myColor5);
+				$(".hexcode4").text(myColor5);
+				$(".square5").css("background-color", myColor4);
+				$(".hexcode5").text(myColor4);
+			});
+		});
+	</script>
+
+	<!--
+<script>
 		$(document).ready(function() {
 			$(".hexcode1").click(function() {
 				hexToRGB();
@@ -174,9 +302,6 @@
 			});
 		});
 
-	</script>
-
-<script>
 $(document).ready(function() {
 	$(".square1").click(function() {
 		lockColor();
@@ -190,7 +315,7 @@ function lockColor() {
 	return
 };
 </script>
-
+-->
 
 </body>
 

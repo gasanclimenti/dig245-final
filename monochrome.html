@@ -7,6 +7,7 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/stylescreate.css">
+  <link rel="stylesheet" href="assets/css/stylepreset.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
 
-  <title>Monochrome Mode</title>
+  <title>Pre-Set Mode</title>
 </head>
 
 <body>
@@ -28,290 +29,595 @@
 
 
   <div class="container">
-		<div class="row">
-			<div class="col-lg-10">
-				<a href="index.html"><img src="assets/img/logo.svg" class="logo"></a>
-			</div>
-			<div class="col-lg-1">
-				<div class="dropdown">
-					<h4 class="dropbtn">Modes</h4>
-					<div class="dropdown-content">
-						<a class="menu" href="random.html">Random</a>
-						<a class="menu" href="createmode.html">Create</a>
-						<a class="menu" href="monochrome.html">Monochrome</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-1">
-				<a class="menu" href="about.html"><h4>About</h4></a>
-			</div>
-		</div>
-	</div>
+    <div class="row">
+      <div class="col-lg-10">
+        <a href="index.html"><img src="assets/img/logo.svg" class="logo"></a>
+      </div>
+      <div class="col-lg-1">
+        <div class="dropdown">
+          <h4 class="dropbtn">Modes</h4>
+          <div class="dropdown-content">
+            <a class="menu" href="random.html">Random</a>
+            <a class="menu" href="createmode.html">Create</a>
+            <a class="menu" href="monochrome.html">Pre-Set</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-1">
+        <a class="menu" href="about.html">
+          <h4>About</h4>
+        </a>
+      </div>
+    </div>
+  </div>
 
 
 
   <div class="container">
-    <p class="instructions">This is monochrome mode! Create a palette featuring multiple shades of all one color.</p>
-    <div class="pickAColor text-center">
-      <p class="ask">Pick a color to begin with.</p>
-      <button class="btn btn-primary btnPick red">red</button>
-      <button class="btn btn-primary btnPick orange">orange</button>
-      <button class="btn btn-primary btnPick yellow">yellow</button>
-      <button class="btn btn-primary btnPick green">green</button>
-      <button class="btn btn-primary btnPick blue">blue</button>
-      <button class="btn btn-primary btnPick purple">purple</button>
-      <button class="btn btn-primary btnPick pink">pink</button>
-      <button class="btn btn-primary btnPick gray">gray</button>
-      <div class="row">
-        <div class="col-4 text-center">
-          <button class="btn btn-danger btnChange mRButton">more red</button>
-        </div>
-        <div class="col-4 text-center">
-          <button class="btn btn-success btnChange mGButton">more green</button>
-        </div>
-        <div class="col-4 text-center">
-          <button class="btn btn-info btnChange mBButton">more blue</button>
+    <p class="instructions">This is pre-set mode! Check out some already-created palettes for your project.</p>
+    <p class="monochrome">Monochrome Palettes (all of the same color)</p>
+  </div>
+
+
+
+  <div class="container palette paletteRed">
+    <div class="row">
+      <div class="col-1 offset-1 g-0">
+        <div class="monosquare roundStart red1">
+          <p class="monohex" style="color: black">#ffc8c8</p>
         </div>
       </div>
-      <div class="row">
-        <div class="col-4 text-center">
-          <button class="btn btn-danger btnChange lRButton">less red</button>
-        </div>
-        <div class="col-4 text-center">
-          <button class="btn btn-success btnChange lGButton">less green</button>
-        </div>
-        <div class="col-4 text-center">
-          <button class="btn btn-info btnChange lBButton">less blue</button>
+      <div class="col-1 g-0">
+        <div class="monosquare red2">
+          <p class="monohex" style="color: black">#ff9696</p>
         </div>
       </div>
-    </div>
-
-
-
-    <div class="container">
-      <div class="row">
-        <div class="col-2 offset-1 g-0">
-          <div class="square square1">
-            <p class="hex hex1"></p>
-          </div>
+      <div class="col-1 g-0">
+        <div class="monosquare red3">
+          <p class="monohex">#ff6464</p>
         </div>
-        <div class="col-2 g-0">
-          <div class="square square2">
-            <p class="hex hex2"></p>
-          </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare red4">
+          <p class="monohex">#ff3232</p>
         </div>
-        <div class="col-2 g-0">
-          <div class="square square3">
-            <p class="hex hex3"></p>
-          </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare red5">
+          <p class="monohex">#ff0000</p>
         </div>
-        <div class="col-2 g-0">
-          <div class="square square4">
-            <p class="hex hex4"></p>
-          </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare red6">
+          <p class="monohex">#cd0000</p>
         </div>
-        <div class="col-2 g-0">
-          <div class="square square5">
-            <p class="hex hex5"></p>
-          </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare red7">
+          <p class="monohex">#9b0000</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare red8">
+          <p class="monohex">#690000</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare red9">
+          <p class="monohex">#370000</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare roundEnd red10">
+          <p class="monohex">#1e0000</p>
         </div>
       </div>
     </div>
+  </div>
 
+  <div class="container palette paletteOrange">
+    <div class="row">
+      <div class="col-1 offset-1 g-0">
+        <div class="monosquare roundStart orange1">
+          <p class="monohex" style="color: black">#ffd7b4</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare orange2">
+          <p class="monohex" style="color: black">#ffc89b</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare orange3">
+          <p class="monohex" style="color: black">#ffb987</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare orange4">
+          <p class="monohex">#ff9c55</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare orange5">
+          <p class="monohex">#ff8732</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare orange6">
+          <p class="monohex">#ff6a00</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare orange7">
+          <p class="monohex">#c85700</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare orange8">
+          <p class="monohex">#913c00</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare orange9">
+          <p class="monohex">#5a2800</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare roundEnd orange10">
+          <p class="monohex">#321600</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <script>
-      $(document).ready(function() {
-        $(".btnChange").hide();
+  <div class="container palette paletteYellow">
+    <div class="row">
+      <div class="col-1 offset-1 g-0">
+        <div class="monosquare roundStart yellow1">
+          <p class="monohex" style="color: black">#ffffc8</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare yellow2">
+          <p class="monohex" style="color: black">#ffff96</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare yellow3">
+          <p class="monohex" style="color: black">#ffff64</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare yellow4">
+          <p class="monohex" style="color: black">#ffff00</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare yellow5">
+          <p class="monohex" style="color: black">#e6e600</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare yellow6">
+          <p class="monohex">#cdcd00</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare yellow7">
+          <p class="monohex">#9b9b00</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare yellow8">
+          <p class="monohex">#696900</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare yellow9">
+          <p class="monohex">#373700</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare roundEnd yellow10">
+          <p class="monohex">#191900</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container palette paletteGreen">
+    <div class="row">
+      <div class="col-1 offset-1 g-0">
+        <div class="monosquare roundStart green1">
+          <p class="monohex" style="color: black">#c8ffc8</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare green2">
+          <p class="monohex" style="color: black">#96ff96</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare green3">
+          <p class="monohex" style="color: black">#64ff64</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare green4">
+          <p class="monohex" style="color: black">#00ff00</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare green5">
+          <p class="monohex">#00e100</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare green6">
+          <p class="monohex">#00cd00</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare green7">
+          <p class="monohex">#009b00</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare green8">
+          <p class="monohex">#006900</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare green9">
+          <p class="monohex">#003700</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare roundEnd green10">
+          <p class="monohex">#001900</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container palette paletteBlue">
+    <div class="row">
+      <div class="col-1 offset-1 g-0">
+        <div class="monosquare roundStart blue1">
+          <p class="monohex" style="color: black">#c8ffff</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare blue2">
+          <p class="monohex" style="color: black">#96ffff</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare blue3">
+          <p class="monohex" style="color: black">#64ffff</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare blue4">
+          <p class="monohex" style="color: black">#00ffff</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare blue5">
+          <p class="monohex">#00e1e1</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare blue6">
+          <p class="monohex">#00cdcd</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare blue7">
+          <p class="monohex">#009b9b</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare blue8">
+          <p class="monohex">#006969</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare blue9">
+          <p class="monohex">#003737</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare roundEnd blue10">
+          <p class="monohex">#002323</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container palette paletteDBlue">
+    <div class="row">
+      <div class="col-1 offset-1 g-0">
+        <div class="monosquare roundStart dblue1">
+          <p class="monohex" style="color: black">#c8e6ff</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare dblue2">
+          <p class="monohex" style="color: black">#96b4ff</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare dblue3">
+          <p class="monohex">#6482ff</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare dblue4">
+          <p class="monohex">#004bff</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare dblue5">
+          <p class="monohex">#0000ff</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare dblue6">
+          <p class="monohex">#0000cd</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare dblue7">
+          <p class="monohex">#00009b</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare dblue8">
+          <p class="monohex">#000069</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare dblue9">
+          <p class="monohex">#000037</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare roundEnd dblue10">
+          <p class="monohex">#000023</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container palette palettePurple">
+    <div class="row">
+      <div class="col-1 offset-1 g-0">
+        <div class="monosquare roundStart purple1">
+          <p class="monohex" style="color: black">#c89bff</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare purple2">
+          <p class="monohex" style="color: black">#b978ff</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare purple3">
+          <p class="monohex">#a455ff</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare purple4">
+          <p class="monohex">#9532ff</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare purple5">
+          <p class="monohex">#8400ff</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare purple6">
+          <p class="monohex">#6300cd</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare purple7">
+          <p class="monohex">#4b009b</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare purple8">
+          <p class="monohex">#37006e</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare purple9">
+          <p class="monohex">#23004b</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare roundEnd purple10">
+          <p class="monohex">#0f0037</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container palette palettePink">
+    <div class="row">
+      <div class="col-1 offset-1 g-0">
+        <div class="monosquare roundStart pink1">
+          <p class="monohex" style="color: black">#ffc8ff</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare pink2">
+          <p class="monohex" style="color: black">#ff96ff</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare pink3">
+          <p class="monohex">#ff64ff</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare pink4">
+          <p class="monohex">#ff0aff</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare pink5">
+          <p class="monohex">#e100e1</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare pink6">
+          <p class="monohex">#cd00cd</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare pink7">
+          <p class="monohex">#9b009b</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare pink8">
+          <p class="monohex">#690069</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare pink9">
+          <p class="monohex">#370037</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare roundEnd pink10">
+          <p class="monohex">#230023</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container palette paletteGray">
+    <div class="row">
+      <div class="col-1 offset-1 g-0">
+        <div class="monosquare roundStart gray1">
+          <p class="monohex" style="color: black">#f5f5f5</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare gray2">
+          <p class="monohex" style="color: black">#e1e1e1</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare gray3">
+          <p class="monohex" style="color: black">#cdcdcd</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare gray4">
+          <p class="monohex" style="color: black">#afafaf</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare gray5">
+          <p class="monohex" style="color: black">#9b9b9b</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare gray6">
+          <p class="monohex">#7d7d7d</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare gray7">
+          <p class="monohex">#696969</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare gray8">
+          <p class="monohex">#4b4b4b</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare gray9">
+          <p class="monohex">#373737</p>
+        </div>
+      </div>
+      <div class="col-1 g-0">
+        <div class="monosquare roundEnd gray10">
+          <p class="monohex">#191919</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+
+    $(document).ready(function() {
+      $(".jewel").click(function() {
+        $(".square1").css("background-color", "#056469");
+        $(".hex1").text("#056469");
+        $(".square2").css("background-color", "#4b0569");
+        $(".hex2").text("#4b0569");
+        $(".square3").css("background-color", "#69054b");
+        $(".hex3").text("#69054b");
+        $(".square4").css("background-color", "#053c69");
+        $(".hex4").text("#053c69");
+        $(".square5").css("background-color", "#d2af05");
+        $(".hex5").text("#d2af05");
       });
+    });
 
-
-  function hexToRGB1() {
-
-        var currentCode = $(".hex1").text();
-
-        R = hexToR(currentCode);
-        G = hexToG(currentCode);
-        B = hexToB(currentCode);
-
-        function hexToR(h) {
-          return parseInt((cutHex(h)).substring(0, 2), 16)
-        }
-
-        function hexToG(h) {
-          return parseInt((cutHex(h)).substring(2, 4), 16)
-        }
-
-        function hexToB(h) {
-          return parseInt((cutHex(h)).substring(4, 6), 16)
-        }
-
-        function cutHex(h) {
-          return (h.charAt(0) == "#") ? h.substring(1, 7) : h
-        }
-
-        console.log(currentCode);
-        console.log(R);
-
-      };
-
-      function hexToRGB2() {
-
-            var currentCode = $(".hex2").text();
-
-            R = hexToR(currentCode);
-            G = hexToG(currentCode);
-            B = hexToB(currentCode);
-
-            function hexToR(h) {
-              return parseInt((cutHex(h)).substring(0, 2), 16)
-            }
-
-            function hexToG(h) {
-              return parseInt((cutHex(h)).substring(2, 4), 16)
-            }
-
-            function hexToB(h) {
-              return parseInt((cutHex(h)).substring(4, 6), 16)
-            }
-
-            function cutHex(h) {
-              return (h.charAt(0) == "#") ? h.substring(1, 7) : h
-            }
-
-            console.log(currentCode);
-            console.log(R)
-
-          };
-
-      $(document).ready(function() {
-        $(".red").click(function() {
-          $(".square1").css("background-color", "#ff0000");
-          $(".hex1").text("#ff0000");
-          $(".square2").css("background-color", "#cd0000");
-          $(".hex2").text("#cd0000");
-          $(".square3").css("background-color", "#9b0000");
-          $(".hex3").text("#9b0000");
-          $(".square4").css("background-color", "#690000");
-          $(".hex4").text("#690000");
-          $(".square5").css("background-color", "#370000");
-          $(".hex5").text("#370000");
-          $(".btnPick").hide();
-          $(".btnChange").show();
-          $(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the palette. Check out the About tab at the top of the page to learn more about RGB codes.");
-          hexToRGB1();
-          hexToRGB2();
-        });
+    $(document).ready(function() {
+      $(".pastel").click(function() {
+        $(".square1").css("background-color", "#c8fad2");
+        $(".hex1").text("#c8fad2");
+        $(".square2").css("background-color", "#f5e6a0");
+        $(".hex2").text("#f5e6a0");
+        $(".square3").css("background-color", "#a0f5f5");
+        $(".hex3").text("#a0f5f5");
+        $(".square4").css("background-color", "#bea0f5");
+        $(".hex4").text("#bea0f5");
+        $(".square5").css("background-color", "#f5a0e1");
+        $(".hex5").text("#f5a0e1");
       });
+    });
 
-    		function rgbToHex(R, G, B) {
-    			return toHex(R) + toHex(G) + toHex(B);
-    		}
+    $(document).ready(function() {
+      $(".warm").click(function() {
+        $(".square1").css("background-color", "#eb6e6e");
+        $(".hex1").text("#eb6e6e");
+        $(".square2").css("background-color", "#ebaa6e");
+        $(".hex2").text("#ebaa6e");
+        $(".square3").css("background-color", "#ebd66e");
+        $(".hex3").text("#ebd66e");
+        $(".square4").css("background-color", "#821414");
+        $(".hex4").text("#821414");
+        $(".square5").css("background-color", "#824214");
+        $(".hex5").text("#824214");
+      });
+    });
 
-    		function toHex(n) {
-    			n = parseInt(n, 10);
-    			if (isNaN(n)) return "00";
-    			n = Math.max(0, Math.min(n, 255));
-    			return "0123456789ABCDEF".charAt((n - n % 16) / 16) +
-    				"0123456789ABCDEF".charAt(n % 16);
+    $(document).ready(function() {
+      $(".cool").click(function() {
+        $(".square1").css("background-color", "#14825a");
+        $(".hex1").text("#14825a");
+        $(".square2").css("background-color", "#146582");
+        $(".hex2").text("#146582");
+        $(".square3").css("background-color", "#142382");
+        $(".hex3").text("#142382");
+        $(".square4").css("background-color", "#3c1482");
+        $(".hex4").text("#3c1482");
+        $(".square5").css("background-color", "#6441a0");
+        $(".hex5").text("#6441a0");
+      });
+    });
 
-    		};
-
-    		function changeColor() {
-
-    			var color = "#" + rgbToHex(R, G, B);
-
-    			$(".square" ).css("background-color", color);
-    			$(".hex").text(color);
-
-          console.log(R);
-
-        };
-
-
-    		$(document).ready(function() {
-    			$(".mRButton").click(function() {
-
-    				var r = R += 5
-
-    				if (r <= 255) {
-    					changeColor();
-
-    				} else {
-    					var r = 255;
-    				}
-    			});
-    		});
-
-    		$(document).ready(function() {
-    			$(".lRButton").click(function() {
-
-    				var r = R -= 5
-
-    				if (r >= 0) {
-    					changeColor();
-    				}
-
-    			});
-    		});
-
-    		$(document).ready(function() {
-    			$(".mGButton").click(function() {
-
-    				var g = G += 5
-
-    				if (g <= 255) {
-    					changeColor();
-
-    				} else {
-    					var g = 255;
-    				}
-    			});
-    		});
-
-    		$(document).ready(function() {
-    			$(".lGButton").click(function() {
-
-    				var g = G -= 5
-
-    				if (g >= 0) {
-    					changeColor();
-
-    				} else {
-    					var g = 0
-    				}
-    			});
-    		});
-
-    		$(document).ready(function() {
-    			$(".mBButton").click(function() {
-
-    				var b = B += 5
-
-    				if (b <= 255) {
-    					changeColor();
-
-    				} else {
-    					var b = 255;
-    				}
-    			});
-    		});
-
-    		$(document).ready(function() {
-    			$(".lBButton").click(function() {
-
-    				var b = B -= 5
-
-    				if (b >= 0) {
-    					changeColor();
-
-    				} else {
-    					var b = 0;
-    				}
-    			});
-    		});
-
-    </script>
-
+-->
 
 </body>
 

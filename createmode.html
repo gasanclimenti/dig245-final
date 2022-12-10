@@ -38,7 +38,7 @@
 					<div class="dropdown-content">
 						<a class="menu" href="random.html">Random</a>
 						<a class="menu" href="createmode.html">Create</a>
-						<a class="menu" href="monochrome.html">Monochrome</a>
+						<a class="menu" href="monochrome.html">Pre-Set</a>
 					</div>
 				</div>
 			</div>
@@ -67,31 +67,33 @@
 			<div class="col-6 question text-center">
 				<p class="ask">Do you like this color?</p>
 
-				<button class="btn btn-primary btnFirstSet yes1Button">looks perfect</button>
-				<button class="btn btn-primary btnSecondHalfSet yes2Button">that's exactly it</button>
-				<button class="btn btn-primary btnThirdHalfSet yes3Button">yes please</button>
-				<button class="btn btn-primary btnFourthHalfSet yes4Button">I like this one!</button>
-				<button class="btn btn-primary btnFifthHalfSet yes5Button">fantastic</button>
+				<button class="btn btnFirstSet btnNew noButton">absolutely not</button>
 
-				<button class="btn btn-primary btnSecondSet newButton">give me a new random color!</button>
-				<button class="btn btn-primary btnThirdSet new3Button">let's randomize!</button>
-				<button class="btn btn-primary btnFourthSet new4Button">pick a color, any color</button>
-				<button class="btn btn-primary btnFifthSet new5Button">something new please</button>
+				<button class="btn btnSecondSet btnNew newButton">give me a new random color!</button>
+				<button class="btn btnThirdSet btnNew new3Button">let's randomize!</button>
+				<button class="btn btnFourthSet btnNew new4Button">pick a color, any color</button>
+				<button class="btn btnFifthSet btnNew new5Button">something new please</button>
 
-				<button class="btn btn-primary btnSecondSet sameButton">let's play around with this color</button>
-				<button class="btn btn-primary btnThirdSet same3Button">let's manipulate!</button>
-				<button class="btn btn-primary btnFourthSet same4Button">let me tweak this color</button>
-				<button class="btn btn-primary btnFifthSet same5Button">I'll alter this one</button>
+				<button class="btn btnSecondSet btnKinda sameButton">let's play around with this color</button>
+				<button class="btn btnThirdSet btnKinda same3Button">let's manipulate!</button>
+				<button class="btn btnFourthSet btnKinda same4Button">let me tweak this color</button>
+				<button class="btn btnFifthSet btnKinda same5Button">I'll alter this one</button>
 
-				<button class="btn btn-primary btnFirstSet kindaButton">yes, but a different shade</button>
-				<button class="btn btn-primary btnSecondHalfSet kinda2Button">close, but I'll alter it</button>
-				<button class="btn btn-primary btnThirdHalfSet kinda3Button">almost, let me tweak it</button>
-				<button class="btn btn-primary btnFourthHalfSet kinda4Button">let me change the shade</button>
-				<button class="btn btn-primary btnFifthHalfSet kinda5Button">needs a slight change</button>
+				<button class="btn btnFirstSet btnKinda kindaButton">yes, but a different shade</button>
+				<button class="btn btnSecondHalfSet btnKinda kinda2Button">close, but I'll alter it</button>
+				<button class="btn btnThirdHalfSet btnKinda kinda3Button">almost, let me tweak it</button>
+				<button class="btn btnFourthHalfSet btnKinda kinda4Button">let me change the shade</button>
+				<button class="btn btnFifthHalfSet btnKinda kinda5Button">needs a slight change</button>
 
-				<button class="btn btn-primary btnFirstSet noButton">absolutely not</button>
+				<button class="btn btnFirstSet btnYes yes1Button">looks perfect</button>
+				<button class="btn btnSecondHalfSet btnYes yes2Button">that's exactly it</button>
+				<button class="btn btnThirdHalfSet btnYes yes3Button">yes please</button>
+				<button class="btn btnFourthHalfSet btnYes yes4Button">I like this one!</button>
+				<button class="btn btnFifthHalfSet btnYes yes5Button">fantastic</button>
 
-		<!--	<button class="btn btn-primary btnFirstSet inputButton">let me add my own color instead</button>
+				<button class="btn btn-primary btnRepeat">Make a new palette!</button>
+
+				<!--	<button class="btn btn-primary btnFirstSet inputButton">let me add my own color instead</button>
 				<form class="input">
 					<input type="text" class="inputColor">
 					<input type="submit" value="that's it!" class="btn btn-primary yesInput">
@@ -109,6 +111,11 @@
 						<p class="bContent"></p>
 					</div>
 				</div>
+				<!--	<div class="row">
+					<div class="rSlide">
+						<input type="range" min="0" max="255" value="50" class="slider" id="rRange">
+					</div>
+				</div> -->
 				<div class="row">
 					<div class="col-4 text-center">
 						<button class="btn btn-danger btnKindaSet mRButton">more red</button>
@@ -171,7 +178,28 @@
 						</div>
 					</div>
 				</div>
+				<div class="row">
+					<div class="col-2 offset-1 text-center">
+						<img src="assets/img/forward.svg" class="shift forward1">
+					</div>
+					<div class="col-2 text-center">
+						<img src="assets/img/back.svg" class="shift back2">
+						<img src="assets/img/forward.svg" class="shift forward2">
+					</div>
+					<div class="col-2 text-center">
+						<img src="assets/img/back.svg" class="shift back3">
+						<img src="assets/img/forward.svg" class="shift forward3">
+					</div>
+					<div class="col-2 text-center">
+						<img src="assets/img/back.svg" class="shift back4">
+						<img src="assets/img/forward.svg" class="shift forward4">
+					</div>
+					<div class="col-2 text-center">
+						<img src="assets/img/back.svg" class="shift back5">
+					</div>
+				</div>
 			</div>
+
 
 
 			<script>
@@ -187,6 +215,8 @@
 					$(".btnKindaSet").hide();
 					$(".btnKindaSetYes").hide();
 					$(".input").hide();
+					$(".shift").hide();
+					$(".btnRepeat").hide();
 				});
 			</script>
 
@@ -275,6 +305,8 @@
 						$(".noButton").hide();
 						$(".btnSecondHalfSet").hide();
 						$(".btnThirdSet").show();
+						$(".forward1").show();
+						$(".back2").show();
 					});
 				});
 
@@ -298,6 +330,8 @@
 						$(".noButton").hide();
 						$(".btnThirdHalfSet").hide();
 						$(".btnFourthSet").show();
+						$(".forward2").show();
+						$(".back3").show();
 					});
 				});
 
@@ -321,6 +355,8 @@
 						$(".noButton").hide();
 						$(".btnFourthHalfSet").hide();
 						$(".btnFifthSet").show();
+						$(".forward3").show();
+						$(".back4").show();
 					});
 				});
 
@@ -344,6 +380,22 @@
 						$(".noButton").hide();
 						$(".btnFifthHalfSet").hide();
 						$(".colortester").hide();
+						$(".forward4").show();
+						$(".back5").show();
+						$(".btnRepeat").show();
+					});
+				});
+
+				$(document).ready(function() {
+					$(".btnRepeat").click(function() {
+						$(".square").css("background-color", "gray");
+						$(".hex").text("");
+						$(".shift").hide();
+						$(".btnRepeat").hide();
+						genNewColor();
+						$(".colortester").show();
+						$(".btnFirstSet").show();
+						$(".ask").text("Do you like this color?");
 					});
 				});
 			</script>
@@ -384,13 +436,12 @@
 						$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
 						$(".rContent").text("r: " + R);
 						$(".gContent").text("g: " + G);
-						$(".bContent").text("r: " + B);
+						$(".bContent").text("b: " + B);
 						$(".btnFirstSet").hide();
 						$(".goodButton").show();
 						$(".btnKindaSet").show();
 					});
 				});
-
 
 				function rgbToHex(R, G, B) {
 					return toHex(R) + toHex(G) + toHex(B)
@@ -422,12 +473,17 @@
 
 						var r = R += 5
 
-						if (r <= 255) {
+						if (r >= 0 && r <= 255) {
 							$(".rContent").text("r: " + r);
 							changeColor();
 
-						} else {
+						} else if (r >= 255){
 							$(".rContent").text("r: 255");
+							var r = 255;
+
+						} else {
+							$(".rContent").text("r: 0");
+							var r = 0;
 						}
 					});
 				});
@@ -437,12 +493,17 @@
 
 						var r = R -= 5
 
-						if (r >= 0) {
+						if (r >= 0 && r <= 255) {
 							$(".rContent").text("r: " + r);
 							changeColor();
 
+						} else if (r >= 255){
+							$(".rContent").text("r: 255");
+							var r = 255;
+
 						} else {
 							$(".rContent").text("r: 0");
+							var r = 0;
 						}
 					});
 				});
@@ -452,12 +513,17 @@
 
 						var g = G += 5
 
-						if (g <= 255) {
+						if (g >= 0 && g <= 255) {
 							$(".gContent").text("g: " + g);
 							changeColor();
 
-						} else {
+						} else if (g >= 255){
 							$(".gContent").text("g: 255");
+							var g = 255;
+
+						} else {
+							$(".gContent").text("g: 0");
+							var g = 0;
 						}
 					});
 				});
@@ -467,12 +533,17 @@
 
 						var g = G -= 5
 
-						if (g >= 0) {
+						if (g >= 0 && g <= 255) {
 							$(".gContent").text("g: " + g);
 							changeColor();
 
+						} else if (g >= 255){
+							$(".gContent").text("g: 255");
+							var g = 255;
+
 						} else {
 							$(".gContent").text("g: 0");
+							var g = 0;
 						}
 					});
 				});
@@ -482,12 +553,17 @@
 
 						var b = B += 5
 
-						if (b <= 255) {
+						if (b >= 0 && b <= 255) {
 							$(".bContent").text("b: " + b);
 							changeColor();
 
-						} else {
+						} else if (b >= 255){
 							$(".bContent").text("b: 255");
+							var b = 255;
+
+						} else {
+							$(".bContent").text("b: 0");
+							var b = 0;
 						}
 					});
 				});
@@ -497,13 +573,17 @@
 
 						var b = B -= 5
 
-						if (b >= 0) {
-
+						if (b >= 0 && b <= 255) {
 							$(".bContent").text("b: " + b);
 							changeColor();
 
+						} else if (b >= 255){
+							$(".bContent").text("b: 255");
+							var b = 255;
+
 						} else {
 							$(".bContent").text("b: 0");
+							var b = 0;
 						}
 					});
 				});
@@ -529,7 +609,7 @@
 						$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
 						$(".rContent").text("r: " + R);
 						$(".gContent").text("g: " + G);
-						$(".bContent").text("r: " + B);
+						$(".bContent").text("b: " + B);
 						$(".btnSecondSet").hide();
 						$(".rContent").show();
 						$(".gContent").show();
@@ -551,6 +631,8 @@
 						$(".bContent").hide();
 						$(".btnKindaSet").hide();
 						$(".btnThirdSet").show();
+						$(".forward1").show();
+						$(".back2").show();
 					});
 				});
 
@@ -560,7 +642,7 @@
 						$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
 						$(".rContent").text("r: " + R);
 						$(".gContent").text("g: " + G);
-						$(".bContent").text("r: " + B);
+						$(".bContent").text("b: " + B);
 						$(".btnThirdSet").hide();
 						$(".rContent").show();
 						$(".gContent").show();
@@ -582,6 +664,8 @@
 						$(".bContent").hide();
 						$(".btnKindaSet").hide();
 						$(".btnFourthSet").show();
+						$(".forward2").show();
+						$(".back3").show();
 					});
 				});
 
@@ -591,7 +675,7 @@
 						$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
 						$(".rContent").text("r: " + R);
 						$(".gContent").text("g: " + G);
-						$(".bContent").text("r: " + B);
+						$(".bContent").text("b: " + B);
 						$(".btnFourthSet").hide();
 						$(".rContent").show();
 						$(".gContent").show();
@@ -613,6 +697,8 @@
 						$(".bContent").hide();
 						$(".btnKindaSet").hide();
 						$(".btnFifthSet").show();
+						$(".forward3").show();
+						$(".back4").show();
 					});
 				});
 
@@ -622,7 +708,7 @@
 						$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
 						$(".rContent").text("r: " + R);
 						$(".gContent").text("g: " + G);
-						$(".bContent").text("r: " + B);
+						$(".bContent").text("b: " + B);
 						$(".btnFifthSet").hide();
 						$(".rContent").show();
 						$(".gContent").show();
@@ -644,6 +730,9 @@
 						$(".bContent").hide();
 						$(".btnKindaSet").hide();
 						$(".colortester").hide();
+						$(".forward4").show();
+						$(".back5").show();
+						$(".btnRepeat").show();
 					});
 				});
 
@@ -655,7 +744,7 @@
 						$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
 						$(".rContent").text("r: " + R);
 						$(".gContent").text("g: " + G);
-						$(".bContent").text("r: " + B);
+						$(".bContent").text("b: " + B);
 						$(".btnSecondHalfSet").hide();
 						$(".noButton").hide();
 						$(".rContent").show();
@@ -672,7 +761,7 @@
 						$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
 						$(".rContent").text("r: " + R);
 						$(".gContent").text("g: " + G);
-						$(".bContent").text("r: " + B);
+						$(".bContent").text("b: " + B);
 						$(".btnThirdHalfSet").hide();
 						$(".noButton").hide();
 						$(".rContent").show();
@@ -689,7 +778,7 @@
 						$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
 						$(".rContent").text("r: " + R);
 						$(".gContent").text("g: " + G);
-						$(".bContent").text("r: " + B);
+						$(".bContent").text("b: " + B);
 						$(".btnFourthHalfSet").hide();
 						$(".noButton").hide();
 						$(".rContent").show();
@@ -706,7 +795,7 @@
 						$(".ask").text("Click the buttons below to adjust the amount of red, green, and blue in the color. Check out the About tab at the top of the page to learn more about RGB codes.");
 						$(".rContent").text("r: " + R);
 						$(".gContent").text("g: " + G);
-						$(".bContent").text("r: " + B);
+						$(".bContent").text("b: " + B);
 						$(".btnFifthHalfSet").hide();
 						$(".noButton").hide();
 						$(".rContent").show();
@@ -714,6 +803,110 @@
 						$(".bContent").show();
 						$(".btnKindaSet").show();
 						$(".good5Button").show();
+					});
+				});
+			</script>
+
+			<!-- move squares -->
+
+			<script>
+				$(document).ready(function() {
+					$(".forward1").click(function() {
+						var myColor1 = $(".hex1").text();
+						var myColor2 = $(".hex2").text();
+						$(".square1").css("background-color", myColor2);
+						$(".hex1").text(myColor2);
+						$(".square2").css("background-color", myColor1);
+						$(".hex2").text(myColor1);
+					});
+				});
+
+				$(document).ready(function() {
+					$(".forward2").click(function() {
+						var myColor2 = $(".hex2").text();
+						var myColor3 = $(".hex3").text();
+						$(".square2").css("background-color", myColor3);
+						$(".hex2").text(myColor3);
+						$(".square3").css("background-color", myColor2);
+						$(".hex3").text(myColor2);
+					});
+				});
+
+				$(document).ready(function() {
+					$(".forward3").click(function() {
+						var myColor3 = $(".hex3").text();
+						var myColor4 = $(".hex4").text();
+						$(".square3").css("background-color", myColor4);
+						$(".hex3").text(myColor4);
+						$(".square4").css("background-color", myColor3);
+						$(".hex4").text(myColor3);
+					});
+				});
+
+
+				$(document).ready(function() {
+					$(".forward4").click(function() {
+						var myColor4 = $(".hex4").text();
+						var myColor5 = $(".hex5").text();
+						$(".square4").css("background-color", myColor5);
+						$(".hex4").text(myColor5);
+						$(".square5").css("background-color", myColor4);
+						$(".hex5").text(myColor4);
+					});
+				});
+
+				$(document).ready(function() {
+					$(".forward5").click(function() {
+						var myColor4 = $(".hex4").text();
+						var myColor5 = $(".hex5").text();
+						$(".square4").css("background-color", myColor5);
+						$(".hex4").text(myColor5);
+						$(".square5").css("background-color", myColor4);
+						$(".hex5").text(myColor4);
+					});
+				});
+
+				$(document).ready(function() {
+					$(".back2").click(function() {
+						var myColor1 = $(".hex1").text();
+						var myColor2 = $(".hex2").text();
+						$(".square1").css("background-color", myColor2);
+						$(".hex1").text(myColor2);
+						$(".square2").css("background-color", myColor1);
+						$(".hex2").text(myColor1);
+					});
+				});
+
+				$(document).ready(function() {
+					$(".back3").click(function() {
+						var myColor2 = $(".hex2").text();
+						var myColor3 = $(".hex3").text();
+						$(".square2").css("background-color", myColor3);
+						$(".hex2").text(myColor3);
+						$(".square3").css("background-color", myColor2);
+						$(".hex3").text(myColor2);
+					});
+				});
+
+				$(document).ready(function() {
+					$(".back4").click(function() {
+						var myColor4 = $(".hex4").text();
+						var myColor3 = $(".hex3").text();
+						$(".square3").css("background-color", myColor4);
+						$(".hex3").text(myColor4);
+						$(".square4").css("background-color", myColor3);
+						$(".hex4").text(myColor3);
+					});
+				});
+
+				$(document).ready(function() {
+					$(".back5").click(function() {
+						var myColor4 = $(".hex4").text();
+						var myColor5 = $(".hex5").text();
+						$(".square4").css("background-color", myColor5);
+						$(".hex4").text(myColor5);
+						$(".square5").css("background-color", myColor4);
+						$(".hex5").text(myColor4);
 					});
 				});
 			</script>

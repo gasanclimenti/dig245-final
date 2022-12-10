@@ -36,9 +36,51 @@ h4 {
   padding: 2rem;
 }
 
-.btn-primary {
+.btn {
   font-family: "Jua";
   margin-bottom: 1rem;
+  color: white;
+}
+
+.btnNew {
+  background-color: #DA4E4E;
+}
+
+.btnNew:hover {
+  background-color: #B94747;
+  color: white;
+}
+
+.noButton:active {
+  background-color: #B94747;
+  color: white;
+}
+
+.btnKinda {
+  background-color: #E9D94C;
+}
+
+.btnKinda:hover {
+  background-color: #D1C344;
+  color: white;
+}
+
+.btnKinda:active {
+  background-color: #D1C344;
+  color: white;
+}
+
+.btnYes {
+  background-color: #89C23E;
+}
+
+.btnYes:hover {
+  background-color: #73A335;
+  color: white;
+}
+
+.btn-info:hover {
+  color: white;
 }
 
 .btnKindaSet {
@@ -76,6 +118,19 @@ h4 {
   color: white;
 }
 
+.shift {
+  width: 40%;
+  height: 40%;
+}
+
+.forward1 {
+  padding-left: 1rem;
+}
+
+.back5 {
+  padding-right: 1rem;
+}
+
 .btnKindaSetYes {
   width: 100%;
   margin-top: 1rem;
@@ -83,14 +138,6 @@ h4 {
 
 .btnChange {
   margin: 0rem 1rem 1rem .5rem;
-}
-
-.pickAColor {
-  border-radius: 100px;
-  border: 3px solid #4CCCE9;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  width: 100%;
 }
 
 /* from W3Schools */
