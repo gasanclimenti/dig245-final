@@ -30,6 +30,11 @@
   font-size: 70%;
 }
 
+.pst {
+  font-size: 90%;
+}
+
+
 /* red */
 
 .red1 {
@@ -406,4 +411,54 @@
 
 .gray10 {
   background-color: #191919;
+}
+
+
+/* primary, secondary, tertiary */
+.primary1 {
+  background-color: #ff0000;
+}
+
+.primary2 {
+  background-color: #ffff00;
+}
+
+.primary3 {
+  background-color: #0000ff;
+}
+
+.secondary1 {
+  background-color: #FF6600;
+}
+
+.secondary2 {
+  background-color: #00ff00;
+}
+
+.secondary3 {
+  background-color: #6600FF;
+}
+
+.tertiary1 {
+  background-color: #ffbf00;
+}
+
+.tertiary2 {
+  background-color: #e34234;
+}
+
+.tertiary3 {
+  background-color: #ff00ff;
+}
+
+.tertiary4 {
+  background-color: #8f00ff;
+}
+
+.tertiary5 {
+  background-color: #008080;
+}
+
+.tertiary6 {
+  background-color: #7fff00;
 }

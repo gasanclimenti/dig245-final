@@ -51,11 +51,6 @@ h4 {
   color: white;
 }
 
-.noButton:active {
-  background-color: #B94747;
-  color: white;
-}
-
 .btnKinda {
   background-color: #E9D94C;
 }
@@ -65,16 +60,31 @@ h4 {
   color: white;
 }
 
-.btnKinda:active {
-  background-color: #D1C344;
-  color: white;
-}
-
 .btnYes {
   background-color: #89C23E;
 }
 
 .btnYes:hover {
+  background-color: #73A335;
+  color: white;
+}
+
+.btnAlter {
+  background-color: #E9D94C;
+  margin-top: .5rem;
+}
+
+.btnAlter:hover {
+  background-color: #D1C344;
+  color: white;
+}
+
+.btnAdd {
+  background-color: #89C23E;
+  margin-top: .5rem;
+}
+
+.btnAdd:hover {
   background-color: #73A335;
   color: white;
 }
