@@ -121,11 +121,14 @@ h4 {
 
 .hexcode {
   color: white;
+  padding-top: 1rem;
+  font-size: 120%;
 }
 
 .hex {
   padding-top: 17rem;
   color: white;
+  font-size: 100%;
 }
 
 .shift {
@@ -148,6 +151,15 @@ h4 {
 
 .btnChange {
   margin: 0rem 1rem 1rem .5rem;
+}
+
+#inputColor {
+  width: 40%;
+
+}
+
+.btnCheck {
+
 }
 
 /* from W3Schools */
