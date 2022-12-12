@@ -52,8 +52,9 @@
 
 
 
-	<div class="container">
-		<p class="instructions">This is create mode! Use the step-by-step functions to customize a palette to your vision and needs!</p>
+	<div class="container instructions">
+		<p>This is create mode! Use the step-by-step functions to customize a palette to your vision and needs.</p>
+		<p>Visit the <a href="about.html">About</a> page and <a href="monochrome.html">Pre-Set Mode</a> to learn more about color Hex codes, RGB codes, and color theory.</p>
 	</div>
 
 
@@ -91,23 +92,35 @@
 				<button class="btn btnFourthHalfSet btnYes yes4Button">I like this one!</button>
 				<button class="btn btnFifthHalfSet btnYes yes5Button">fantastic</button>
 
-				<button class="btn btn-primary btnRepeat">Make a new palette!</button>
+				<button class="btn btn-primary btnFirstSet inputButton1">let me add my own color instead</button>
+				<button class="btn btn-primary btnSecondSet inputButton2">input another hexcode</button>
+				<button class="btn btn-primary btnThirdSet inputButton3">let's input!</button>
+				<button class="btn btn-primary btnFourthSet inputButton4">I'll add another hexcode</button>
+				<button class="btn btn-primary btnFifthSet inputButton5">manual input</button>
 
-				<button class="btn btn-primary btnFirstSet inputButton">let me add my own color instead</button>
+				<button class="btn btn-primary btnRepeat">Make a new palette!</button>
 
 				<div class="row">
 					<div class="col-4 offset-2">
-						<input type="text" id="inputColor" class="input" value="">
+						<input type="text" id="inputColor" class="input" value="#">
 					</div>
 					<div class="col-4">
-						<button class="btn btn-primary btnInput btnCheck">see color</button>
+						<button class="btn btn-primary input btnCheck">see color</button>
 					</div>
 				</div>
 
-				<button class="btn btnInput btnAdd">add to palette</button>
+				<button class="btn input btnAdd add1">add to palette</button>
+				<button class="btn input btnAdd add2">add to palette</button>
+				<button class="btn input btnAdd add3">add to palette</button>
+				<button class="btn input btnAdd add4">add to palette</button>
+				<button class="btn input btnAdd add5">add to palette</button>
 
 
-				<button class="btn btnInput btnAlter kindaButton">alter shade</button>
+				<button class="btn input btnAlter alter1 kindaButton">alter shade</button>
+				<button class="btn input btnAlter alter2 kinda2Button">alter shade</button>
+				<button class="btn input btnAlter alter3 kinda3Button">alter shade</button>
+				<button class="btn input btnAlter alter4 kinda4Button">alter shade</button>
+				<button class="btn input btnAlter alter5 kinda5Button">alter shade</button>
 
 
 		<div class="row">
@@ -221,7 +234,6 @@
 			$(".btnKindaSet").hide();
 			$(".btnKindaSetYes").hide();
 			$(".input").hide();
-			$(".btnInput").hide();
 			$(".shift").hide();
 			$(".btnRepeat").hide();
 		});
@@ -445,8 +457,7 @@
 				$(".gContent").text("g: " + G);
 				$(".bContent").text("b: " + B);
 				$(".btnFirstSet").hide();
-				$(".btnInput").hide();
-				$("#inputColor").hide();
+				$(".input").hide();
 				$(".goodButton").show();
 				$(".btnKindaSet").show();
 			});
@@ -756,6 +767,7 @@
 				$(".bContent").text("b: " + B);
 				$(".btnSecondHalfSet").hide();
 				$(".noButton").hide();
+				$(".input").hide();
 				$(".rContent").show();
 				$(".gContent").show();
 				$(".bContent").show();
@@ -773,6 +785,7 @@
 				$(".bContent").text("b: " + B);
 				$(".btnThirdHalfSet").hide();
 				$(".noButton").hide();
+				$(".input").hide();
 				$(".rContent").show();
 				$(".gContent").show();
 				$(".bContent").show();
@@ -790,6 +803,7 @@
 				$(".bContent").text("b: " + B);
 				$(".btnFourthHalfSet").hide();
 				$(".noButton").hide();
+				$(".input").hide();
 				$(".rContent").show();
 				$(".gContent").show();
 				$(".bContent").show();
@@ -807,6 +821,7 @@
 				$(".bContent").text("b: " + B);
 				$(".btnFifthHalfSet").hide();
 				$(".noButton").hide();
+				$(".input").hide();
 				$(".rContent").show();
 				$(".gContent").show();
 				$(".bContent").show();
@@ -924,33 +939,135 @@
 	<!-- input button -->
 
 	<script>
+
+	$(document).ready(function() {
+		$(".btnCheck").click(function() {
+			var inputColor = $("#inputColor").val();
+			$(".colortester").css("background-color", inputColor);
+			$(".hexcode").text(inputColor);
+		});
+	});
+
 		$(document).ready(function() {
-			$(".inputButton").click(function() {
-				$(".ask").text("Enter a Hex code for a color below. Click the About tab above to learn more about Hex codes.");
+			$(".inputButton1").click(function() {
+				$(".ask").text("Enter a Hex code for a color below. Click the About tab at the top of the page to learn more about Hex codes.");
 				$(".btnFirstSet").hide();
-				$(".input").show();
-				$(".btnInput").show();
-			});
-		});
-
-
-		$(document).ready(function() {
-			$(".btnCheck").click(function() {
-				var inputColor = $("#inputColor").val();
-				$(".ask").text("Cool!");
-				$(".colortester").css("background-color", inputColor);
-				$(".hexcode").text(inputColor);
+				$("#inputColor").show();
+				$(".btnCheck").show();
+				$(".alter1").show();
+				$(".add1").show();
 			});
 		});
 
 		$(document).ready(function() {
-			$(".btnAdd").click(function() {
+			$(".add1").click(function() {
 				var addColor = $(".hexcode").text();
-				$(".ask").text("Cool!");
+				$(".ask").text("Perfect! What would you like to do for the second color?");
 				$(".square1").css("background-color", addColor);
 				$(".hex1").text(addColor);
+				$(".btnSecondSet").show();
+				$(".input").hide()
 			});
 		});
+
+		$(document).ready(function() {
+			$(".inputButton2").click(function() {
+				$(".ask").text("Enter a Hex code for a color below. Click the About tab at the top of the page to learn more about Hex codes.");
+				$(".btnSecondSet").hide();
+				$("#inputColor").show();
+				$(".btnCheck").show();
+				$(".alter2").show();
+				$(".add2").show();
+			});
+		});
+
+		$(document).ready(function() {
+			$(".add2").click(function() {
+				var addColor = $(".hexcode").text();
+				$(".ask").text("Awesome! How about the third color?");
+				$(".square2").css("background-color", addColor);
+				$(".hex2").text(addColor);
+				$(".btnThirdSet").show();
+				$(".forward1").show();
+				$(".back2").show();
+				$(".input").hide()
+			});
+		});
+
+		$(document).ready(function() {
+			$(".inputButton3").click(function() {
+				$(".ask").text("Enter a Hex code for a color below. Click the About tab at the top of the page to learn more about Hex codes.");
+				$(".btnThirdSet").hide();
+				$("#inputColor").show();
+				$(".btnCheck").show();
+				$(".alter3").show();
+				$(".add3").show();
+			});
+		});
+
+		$(document).ready(function() {
+			$(".add3").click(function() {
+				var addColor = $(".hexcode").text();
+				$(".ask").text("Looking great! Now for a fourth color.");
+				$(".square3").css("background-color", addColor);
+				$(".hex3").text(addColor);
+				$(".btnFourthSet").show();
+				$(".forward2").show();
+				$(".back3").show();
+				$(".input").hide()
+			});
+		});
+
+		$(document).ready(function() {
+			$(".inputButton4").click(function() {
+				$(".ask").text("Enter a Hex code for a color below. Click the About tab at the top of the page to learn more about Hex codes.");
+				$(".btnFourthSet").hide();
+				$("#inputColor").show();
+				$(".btnCheck").show();
+				$(".alter4").show();
+				$(".add4").show();
+			});
+		});
+
+		$(document).ready(function() {
+			$(".add4").click(function() {
+				var addColor = $(".hexcode").text();
+				$(".ask").text("Almost there! What would you like for your final color?");
+				$(".square4").css("background-color", addColor);
+				$(".hex4").text(addColor);
+				$(".btnFifthSet").show();
+				$(".forward3").show();
+				$(".back4").show();
+				$(".input").hide();
+			});
+		});
+
+		$(document).ready(function() {
+			$(".inputButton5").click(function() {
+				$(".ask").text("Enter a Hex code for a color below. Click the About tab at the top of the page to learn more about Hex codes.");
+				$(".btnFifthSet").hide();
+				$("#inputColor").show();
+				$(".btnCheck").show();
+				$(".alter5").show();
+				$(".add5").show();
+			});
+		});
+
+		$(document).ready(function() {
+			$(".add5").click(function() {
+				var addColor = $(".hexcode").text();
+				$(".ask").text("You did it! Nice palette. Take a look at the hex codes below to select these colors for your next project.");
+				$(".square5").css("background-color", addColor);
+				$(".hex5").text(addColor);
+				$(".forward4").show();
+				$(".back5").show();
+				$(".btnRepeat").show();
+				$(".input").hide();
+				$(".colortester").hide();
+				$(".hexcode").hide();
+			});
+		});
+
 	</script>
 
 

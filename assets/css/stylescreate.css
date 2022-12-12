@@ -177,9 +177,9 @@ h4 {
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #4CCCE9;}
+.dropdown:hover .dropbtn {color: #3366CC;}
 
-a {
+.menu {
   text-decoration: none;
   color: black;
-}
+};
