@@ -1,5 +1,14 @@
 /* css */
 
+.monoInstructions {
+  border-radius: 100px;
+  border: 3px solid #4CCCE9;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
+}
+
 .monochrome {
   border-radius: 100px;
   border: 3px solid #C04CE9;
@@ -27,11 +36,11 @@
 .monohex {
   padding-top: 10.5rem;
   color: white;
-  font-size: 70%;
+  font-size: 60%;
 }
 
 .pst {
-  font-size: 90%;
+  font-size: 95%;
 }
 
 

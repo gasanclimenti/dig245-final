@@ -53,8 +53,9 @@
 
 
 	<div class="container instructions">
-		<p>This is create mode! Use the step-by-step functions to customize a palette to your vision and needs.</p>
-		<p>Visit the <a href="about.html">About</a> page and <a href="monochrome.html">Pre-Set Mode</a> to learn more about color Hex codes, RGB codes, and color theory.</p>
+		<p>Welcome to Create Mode!</p>
+		<p>Use the step-by-step functions to customize a palette to your vision and needs.</p>
+		<p>Visit the <a href="about.html" target="_blank">About</a> page and <a href="monochrome.html" target="_blank">Pre-Set Mode</a> to learn more about color Hex codes, RGB codes, and color theory.</p>
 	</div>
 
 
@@ -397,7 +398,7 @@
 						var myColor5 = $(".hexcode").text();
 						$(".square5").css("background-color", myColor5);
 						$(".hex5").text(myColor5);
-						$(".ask").text("You did it! Nice palette. Take a look at the hex codes below to select these colors for your next project.");
+						$(".ask").text("You did it! Nice palette. Take a look at the Hex codes below to select these colors for your next project.");
 						$(".noButton").hide();
 						$(".btnFifthHalfSet").hide();
 						$(".colortester").hide();
@@ -415,6 +416,7 @@
 						$(".btnRepeat").hide();
 						genNewColor();
 						$(".colortester").show();
+						$(".hexcode").show();
 						$(".btnFirstSet").show();
 						$(".ask").text("Do you like this color?");
 					});
@@ -746,7 +748,7 @@
 						var myColor5 = $(".hexcode").text();
 						$(".square5").css("background-color", myColor5);
 						$(".hex5").text(myColor5);
-						$(".ask").text("You did it! Nice palette. Take a look at the hex codes below to select these colors for your next project.");
+						$(".ask").text("You did it! Nice palette. Take a look at the Hex codes below to select these colors for your next project.");
 						$(".good5Button").hide();
 						$(".rContent").hide();
 						$(".gContent").hide();
@@ -952,7 +954,7 @@
 
 				$(document).ready(function() {
 					$(".inputButton1").click(function() {
-						$(".ask").text("Enter a Hex code for a color below. Click the About tab at the top of the page to learn more about Hex codes.");
+						$(".ask").text("Enter a Hex code below. Be sure to include the # and six characters. To apply the code, click on See Color before Add to Palette. Check out the About tab at the top of the page to learn more about Hex codes, or visit Pre-Set Mode for a list of standard color codes.");
 						$(".btnFirstSet").hide();
 						$("#inputColor").show();
 						$(".btnCheck").show();
@@ -974,7 +976,7 @@
 
 				$(document).ready(function() {
 					$(".inputButton2").click(function() {
-						$(".ask").text("Enter a Hex code for a color below. Click the About tab at the top of the page to learn more about Hex codes.");
+						$(".ask").text("Enter a Hex code below. Be sure to include the # and six characters. To apply the code, click on See Color before Add to Palette. Check out the About tab at the top of the page to learn more about Hex codes, or visit Pre-Set Mode for a list of standard color codes.");
 						$(".btnSecondSet").hide();
 						$("#inputColor").show();
 						$(".btnCheck").show();
@@ -998,7 +1000,7 @@
 
 				$(document).ready(function() {
 					$(".inputButton3").click(function() {
-						$(".ask").text("Enter a Hex code for a color below. Click the About tab at the top of the page to learn more about Hex codes.");
+						$(".ask").text("Enter a Hex code below. Be sure to include the # and six characters. To apply the code, click on See Color before Add to Palette. Check out the About tab at the top of the page to learn more about Hex codes, or visit Pre-Set Mode for a list of standard color codes.");
 						$(".btnThirdSet").hide();
 						$("#inputColor").show();
 						$(".btnCheck").show();
@@ -1022,7 +1024,7 @@
 
 				$(document).ready(function() {
 					$(".inputButton4").click(function() {
-						$(".ask").text("Enter a Hex code for a color below. Click the About tab at the top of the page to learn more about Hex codes.");
+						$(".ask").text("Enter a Hex code below. Be sure to include the # and six characters. To apply the code, click on See Color before Add to Palette. Check out the About tab at the top of the page to learn more about Hex codes, or visit Pre-Set Mode for a list of standard color codes.");
 						$(".btnFourthSet").hide();
 						$("#inputColor").show();
 						$(".btnCheck").show();
@@ -1046,7 +1048,7 @@
 
 				$(document).ready(function() {
 					$(".inputButton5").click(function() {
-						$(".ask").text("Enter a Hex code for a color below. Click the About tab at the top of the page to learn more about Hex codes.");
+						$(".ask").text("Enter a Hex code below. Be sure to include the # and six characters. To apply the code, click on See Color before Add to Palette. Check out the About tab at the top of the page to learn more about Hex codes, or visit Pre-Set Mode for a list of standard color codes.");
 						$(".btnFifthSet").hide();
 						$("#inputColor").show();
 						$(".btnCheck").show();
@@ -1058,7 +1060,7 @@
 				$(document).ready(function() {
 					$(".add5").click(function() {
 						var addColor = $(".hexcode").text();
-						$(".ask").text("You did it! Nice palette. Take a look at the hex codes below to select these colors for your next project.");
+						$(".ask").text("You did it! Nice palette. Take a look at the Hex codes below to select these colors for your next project.");
 						$(".square5").css("background-color", addColor);
 						$(".hex5").text(addColor);
 						$(".forward4").show();
