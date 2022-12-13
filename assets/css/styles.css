@@ -33,6 +33,16 @@ h4 {
   background-color: #89c23e;
 }
 
+#startAbout {
+  font-family: "Lobster";
+  font-size: 120%;
+  background-color: #E9D94C;
+}
+
+#startAbout:hover {
+  background-color: #D1C344;
+}
+
 .instructions {
   border-radius: 100px;
   border: 3px solid #4CCCE9;

@@ -89,7 +89,30 @@ h4 {
   color: white;
 }
 
-.btn-info:hover {
+.btnR {
+  background-color: #DA4E4E;
+}
+
+.btnR:hover {
+  background-color: #B94747;
+  color: white;
+}
+
+.btnG {
+  background-color: #89C23E;
+}
+
+.btnG:hover {
+  background-color: #73A335;
+  color: white;
+}
+
+.btnB {
+  background-color: #4CCCE9;
+}
+
+.btnB:hover {
+  background-color: #3facc4;
   color: white;
 }
 

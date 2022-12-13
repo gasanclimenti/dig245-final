@@ -91,22 +91,22 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-2 offset-1 text-center">
+			<div class="col-2 offset-1 text-center">
 				<img src="assets/img/forward.svg" class="shift forward1">
 			</div>
-			<div class="col-sm-2 text-center">
+			<div class="col-2 text-center">
 				<img src="assets/img/back.svg" class="shift back2">
 				<img src="assets/img/forward.svg" class="shift forward2">
 			</div>
-			<div class="col-sm-2 text-center">
+			<div class="col-2 text-center">
 				<img src="assets/img/back.svg" class="shift back3">
 				<img src="assets/img/forward.svg" class="shift forward3">
 			</div>
-			<div class="col-sm-2 text-center">
+			<div class="col-2 text-center">
 				<img src="assets/img/back.svg" class="shift back4">
 				<img src="assets/img/forward.svg" class="shift forward4">
 			</div>
-			<div class="col-sm-2 text-center">
+			<div class="col-2 text-center">
 				<img src="assets/img/back.svg" class="shift back5">
 			</div>
 		</div>
@@ -151,36 +151,15 @@
 		}
 
 		genNewColor();
+
+
 		$(document).ready(function() {
 			$("button").click(function() {
 				genNewColor();
-			});
+				});
 		});
 
-		function hexToRGB() {
 
-			var currentCode = $(".hexcode").text();
-
-			R = hexToR(currentCode);
-			G = hexToG(currentCode);
-			B = hexToB(currentCode);
-
-			function hexToR(h) {
-				return parseInt((cutHex(h)).substring(0, 2), 16)
-			}
-
-			function hexToG(h) {
-				return parseInt((cutHex(h)).substring(2, 4), 16)
-			}
-
-			function hexToB(h) {
-				return parseInt((cutHex(h)).substring(4, 6), 16)
-			}
-
-			function cutHex(h) {
-				return (h.charAt(0) == "#") ? h.substring(1, 7) : h
-			}
-		}
 	</script>
 
 	<!-- moving colors -->
